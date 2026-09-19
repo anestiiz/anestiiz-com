@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Fill the brief — anestiiz</title>
-  <meta name="description" content="A short project request: AI video, app or website. Direct message delivered to anestiiz.">
+  <title>Start a project — anestiiz</title>
+  <meta name="description" content="A quick 30-second project brief for AI video, app or website design, and presentations.">
   <link rel="icon" type="image/png" href="assets/favicon/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon/favicon.png">
   <style>
@@ -42,64 +42,68 @@
     .header-right{justify-self:end;font-size:14px;color:var(--soft)}
 
     .brief-hero{padding-top:clamp(48px,6vw,96px)}
-    .brief-eyebrow{font-size:clamp(18px,1.6vw,22px);letter-spacing:.02em;text-transform:none;color:var(--pink);margin-bottom:24px;font-weight:600}
+    .brief-eyebrow{font-size:clamp(18px,1.6vw,22px);letter-spacing:.02em;color:var(--pink);margin-bottom:24px;font-weight:600}
     .brief-hero h1{margin:0;font-size:clamp(62px,7vw,128px);line-height:.86;letter-spacing:-.05em;font-weight:400}
 
     .brief-form-wrap{padding-bottom:clamp(80px,10vw,160px);padding-top:clamp(32px,4vw,64px)}
     .brief-grid{display:grid;grid-template-columns:minmax(0,.44fr) minmax(360px,.56fr);gap:clamp(48px,6vw,96px);align-items:start}
-    .brief-side{position:sticky;top:104px;display:flex;flex-direction:column;gap:36px;color:var(--muted)}
+    .brief-side{position:sticky;top:104px;display:flex;flex-direction:column;gap:32px;color:var(--muted)}
     .brief-side .reply{font-family:"AkzidenzGroteskPro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;font-size:clamp(28px,2.6vw,40px);line-height:1.05;letter-spacing:-.03em;color:var(--ink);margin:0}
-    .brief-side .reply a{color:var(--pink);text-decoration:none;border-bottom:1px solid rgba(255,0,106,.5);transition:border-color .2s ease}
-    .brief-side .reply a:hover{border-bottom-color:var(--pink)}
-    .brief-side .steps{display:grid;gap:18px;padding-top:32px;border-top:1px solid var(--line)}
-    .brief-side .step{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:baseline}
-    .brief-side .step-num{font-family:"AkzidenzGroteskPro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;font-size:14px;line-height:20px;color:var(--soft);font-variant-numeric:tabular-nums;letter-spacing:.08em}
-    .brief-side .step-text{font-size:17px;line-height:24px;color:var(--ink);letter-spacing:-.01em}
-    .brief-side .step-text small{display:block;color:var(--soft);font-size:14px;line-height:20px;margin-top:4px}
+    .alt-contact{display:flex;flex-direction:column;gap:12px;padding-top:28px;border-top:1px solid var(--line)}
+    .alt-contact .alt-note{margin:0;color:var(--soft);font-size:14px;line-height:20px;letter-spacing:-.01em}
+    .alt-contact .alt-btn{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.20);background:rgba(255,255,255,.05);color:var(--ink);font-size:14px;line-height:20px;font-weight:600;letter-spacing:-.15px;transition:.2s ease}
+    .alt-contact .alt-btn:hover{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.34);transform:translateY(-1px)}
+    .alt-contact .alt-btn .icon-arrow-up{width:14px;height:14px;filter:brightness(0) invert(1)}
 
     .icon-arrow-up{display:inline-block;width:1em;height:1em;object-fit:contain;vertical-align:-.13em;flex:0 0 auto}
-    .icon-arrow-up.light{filter:invert(98%) sepia(8%) saturate(530%) hue-rotate(283deg) brightness(102%) contrast(92%)}
 
-    .request-form{display:grid;gap:22px;padding:28px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));box-shadow:0 24px 80px rgba(0,0,0,.28),0 0 0 1px rgba(255,255,255,.03) inset}
-    .form-group{display:grid;gap:12px}
+    .request-form{display:grid;gap:22px;padding:28px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));box-shadow:0 24px 80px rgba(0,0,0,.28),0 0 0 1px rgba(255,255,255,.03) inset}
+    .form-group{display:grid;gap:10px}
+    .form-group[hidden]{display:none}
     .form-label{font-size:12px;line-height:20px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
-    .form-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-    .form-options.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .form-options.cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}
-    .option-pill{position:relative;min-width:0}
+    .form-label em{font-style:normal;color:var(--pink);font-weight:700;margin-left:4px}
+
+    .form-options{display:flex;flex-wrap:wrap;gap:8px}
+    .option-pill{position:relative;flex:1 1 auto;min-width:0}
     .option-pill input{position:absolute;opacity:0;pointer-events:none}
-    .option-pill span{display:flex;align-items:center;justify-content:center;min-height:44px;padding:11px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.025);color:var(--muted);font-size:14px;line-height:20px;font-weight:600;letter-spacing:-.2px;text-align:center;cursor:pointer;transition:color .2s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease}
+    .option-pill span{display:flex;align-items:center;justify-content:center;min-height:44px;padding:11px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.025);color:var(--muted);font-size:14px;line-height:20px;font-weight:600;letter-spacing:-.2px;text-align:center;cursor:pointer;transition:color .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease,transform .18s ease;white-space:nowrap}
+    .option-pill span:hover{color:var(--ink);border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.05)}
     .option-pill input:focus-visible + span{outline:2px solid rgba(255,0,106,.7);outline-offset:2px}
-    .option-pill input:checked + span{color:#fff;border-color:rgba(255,255,255,.34);background:var(--pill-bg);box-shadow:var(--pill-shadow)}
-    .form-field{display:grid;gap:10px}
+    .option-pill input:checked + span{color:#fff;border-color:rgba(255,255,255,.34);background:var(--pill-bg);box-shadow:var(--pill-shadow);transform:translateY(-1px)}
+
+    .form-field{display:grid;gap:8px}
     .form-field[hidden]{display:none}
-    .form-field span{font-size:12px;line-height:20px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
-    .form-field input,.form-field textarea{width:100%;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:rgba(255,255,255,.035);color:var(--ink);font-family:"Manrope",sans-serif;font-size:17px;line-height:24px;letter-spacing:-.2px;padding:14px 16px;outline:0;transition:border-color .2s ease,box-shadow .2s ease,background .2s ease}
-    .form-field textarea{min-height:140px;resize:vertical}
+    .form-field input,.form-field textarea{width:100%;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.035);color:var(--ink);font-family:"Manrope",sans-serif;font-size:17px;line-height:24px;letter-spacing:-.2px;padding:14px 16px;outline:0;transition:border-color .2s ease,box-shadow .2s ease,background .2s ease}
+    .form-field textarea{min-height:96px;resize:vertical}
     .form-field input::placeholder,.form-field textarea::placeholder{color:rgba(187,174,180,.58)}
     .form-field input:focus,.form-field textarea:focus{border-color:rgba(255,0,106,.62);background:rgba(255,255,255,.05);box-shadow:0 0 0 3px rgba(255,0,106,.12)}
-    .form-submit{justify-self:start;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:999px;border:var(--pill-border);background:var(--pill-bg);box-shadow:var(--pill-shadow);color:#fff;font-family:"Manrope",sans-serif;font-size:15px;line-height:20px;font-weight:600;letter-spacing:-.2px;cursor:pointer;transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}
+    .form-field.is-invalid input,.form-field.is-invalid textarea{border-color:rgba(255,128,152,.55);background:rgba(255,128,152,.06)}
+    .form-error{display:none;font-size:13px;line-height:18px;color:#ff8098;letter-spacing:-.01em}
+    .form-group.is-invalid .form-error,.form-field.is-invalid .form-error{display:block}
+
+    .details-toggle-wrap{display:grid;gap:10px}
+    .details-toggle{justify-self:start;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px dashed rgba(255,255,255,.18);background:transparent;color:var(--soft);font-family:"Manrope",sans-serif;font-size:13px;line-height:18px;font-weight:500;letter-spacing:-.1px;cursor:pointer;transition:.2s ease}
+    .details-toggle:hover{color:var(--ink);border-color:rgba(255,255,255,.34)}
+    .details-toggle-icon{display:inline-block;font-size:16px;line-height:1;transition:transform .2s ease}
+    .details-toggle[aria-expanded="true"] .details-toggle-icon{transform:rotate(45deg)}
+
+    .form-submit{justify-self:start;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:999px;border:var(--pill-border);background:var(--pill-bg);box-shadow:var(--pill-shadow);color:#fff;font-family:"Manrope",sans-serif;font-size:16px;line-height:20px;font-weight:600;letter-spacing:-.2px;cursor:pointer;transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}
     .form-submit:hover{transform:translateY(-1px);filter:brightness(1.06);box-shadow:0 20px 46px rgba(255,0,106,.42)}
     .form-submit .icon-arrow-up{width:18px;height:18px;filter:brightness(0) invert(1)}
-    .form-note{margin:0;color:var(--soft);font-size:14px;line-height:20px}
+    .form-submit[disabled]{opacity:.6;cursor:progress;transform:none}
+    .form-note{margin:0;color:var(--soft);font-size:13px;line-height:18px;letter-spacing:-.01em}
     .form-status{font-size:14px;line-height:20px;color:var(--soft);min-height:20px;letter-spacing:-.1px}
     .form-status.is-error{color:#ff8098}
-    .form-submit[disabled]{opacity:.6;cursor:progress;transform:none}
-    .form-success{display:none;flex-direction:column;gap:16px;padding:36px 28px;border:1px solid rgba(124,228,149,.28);border-radius:16px;background:linear-gradient(180deg,rgba(124,228,149,.06),rgba(124,228,149,.015));text-align:left}
-    .form-success.is-visible{display:flex}
-    .form-success .badge{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;border:1px solid rgba(124,228,149,.32);background:rgba(124,228,149,.08);color:#7ce495;font-size:12px;line-height:16px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-    .form-success .badge:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#7ce495;box-shadow:0 0 0 4px rgba(124,228,149,.18)}
-    .form-success h2{margin:0;font-family:"AkzidenzGroteskPro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;font-size:clamp(28px,3vw,44px);line-height:1;letter-spacing:-.03em;color:var(--ink)}
-    .form-success p{margin:0;font-size:17px;line-height:24px;color:var(--muted);letter-spacing:-.01em;max-width:44ch}
-    .form-success p a{color:var(--pink);border-bottom:1px solid rgba(255,0,106,.5)}
-    .request-form.is-hidden{display:none}
-    .form-field[hidden]{display:none}
-    .direct-cta{display:none;flex-direction:column;gap:10px;padding:18px;border:1px dashed rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.02)}
-    .direct-cta.is-visible{display:flex}
-    .direct-cta-note{margin:0;color:var(--soft);font-size:13px;line-height:18px;letter-spacing:.02em}
-    .direct-cta-btn{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.20);background:rgba(255,255,255,.05);color:var(--ink);font-family:"Manrope",sans-serif;font-size:14px;line-height:20px;font-weight:600;letter-spacing:-.15px;transition:.2s ease}
-    .direct-cta-btn:hover{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.34);transform:translateY(-1px)}
-    .direct-cta-btn .icon-arrow-up{width:16px;height:16px;filter:brightness(0) invert(1)}
+
+    .done-swap{transition:opacity .3s ease}
+    .done-swap.is-fading{opacity:0;pointer-events:none}
+    .brief-done{padding:clamp(96px,16vh,200px) var(--pad) clamp(96px,16vh,200px);display:flex;justify-content:center}
+    .brief-done-inner{display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;max-width:560px;opacity:0;transform:translateY(8px);animation:doneEnter .45s ease .05s forwards}
+    .brief-done-check{width:56px;height:56px;display:grid;place-items:center;color:var(--ink);opacity:.85}
+    .brief-done-check svg{display:block}
+    .brief-done-title{margin:0;font-family:"AkzidenzGroteskPro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;font-size:clamp(52px,6vw,104px);line-height:.9;letter-spacing:-.045em;color:var(--ink)}
+    .brief-done-note{margin:0;font-size:17px;line-height:26px;color:var(--soft);letter-spacing:-.01em;max-width:38ch}
+    @keyframes doneEnter{to{opacity:1;transform:none}}
 
     footer{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center;padding:20px var(--pad) 24px;font-size:12px;border-top:1px solid var(--line);color:var(--soft)}
     footer .top{justify-self:center}
@@ -111,8 +115,11 @@
     @media(max-width:640px){
       .header-row{height:64px}
       .brief-hero h1{font-size:52px}
-      .form-options,.form-options.cols-4,.form-options.cols-5{grid-template-columns:1fr 1fr}
-      .request-form{padding:22px}
+      .option-pill{flex:1 1 calc(50% - 4px)}
+      .option-pill span{padding:11px 14px}
+      .request-form{padding:22px;gap:20px}
+      .brief-done-title{font-size:44px}
+      .brief-done{padding:64px var(--pad)}
     }
   </style>
   <script defer src="assets/js/analytics.js"></script>
@@ -126,83 +133,108 @@
   </header>
 
   <main>
+    <div id="mainForm" class="done-swap">
     <section class="brief-hero wrap">
-      <div class="brief-eyebrow">Got an idea?</div>
-      <h1>Fill the brief</h1>
+      <div class="brief-eyebrow">Have an idea?</div>
+      <h1>Start a project</h1>
     </section>
 
     <section class="wrap brief-form-wrap">
       <div class="brief-grid">
         <aside class="brief-side">
-          <p class="reply">I reply within 15 minutes.<br>Prefer Telegram? DM me <a href="https://t.me/anestiiz" target="_blank" rel="noopener">@anestiiz</a>.</p>
-          <div class="steps">
-            <div class="step"><span class="step-num">01</span><span class="step-text">Fill the brief<small>A couple of clicks and I've got your request</small></span></div>
-            <div class="step"><span class="step-num">02</span><span class="step-text">We talk it through<small>Call or chat — whichever works</small></span></div>
-            <div class="step"><span class="step-num">03</span><span class="step-text">We start<small>Estimate and timeline the same day</small></span></div>
+          <p class="reply">A few clicks — and we can discuss your project.</p>
+          <div class="alt-contact">
+            <p class="alt-note">Or message me on Telegram</p>
+            <a class="alt-btn" href="https://t.me/anestiiz" target="_blank" rel="noopener">@anestiiz <img class="icon-arrow-up" src="Icons/Arrow Right Up.svg" alt=""></a>
           </div>
         </aside>
 
         <form class="request-form" id="requestForm" novalidate>
-          <div class="form-group">
-            <div class="form-label">Project type</div>
-            <div class="form-options cols-4" role="radiogroup" aria-label="Project type">
-              <label class="option-pill"><input type="radio" name="projectType" value="AI creative" checked><span>AI creative</span></label>
+          <!-- 1. What are we creating -->
+          <div class="form-group" data-field="projectType">
+            <div class="form-label">What are we creating?<em>*</em></div>
+            <div class="form-options" role="radiogroup" aria-label="What are we creating">
+              <label class="option-pill"><input type="radio" name="projectType" value="AI video"><span>AI video</span></label>
+              <label class="option-pill"><input type="radio" name="projectType" value="AI photoshoot"><span>AI photoshoot</span></label>
               <label class="option-pill"><input type="radio" name="projectType" value="App"><span>App</span></label>
               <label class="option-pill"><input type="radio" name="projectType" value="Website"><span>Website</span></label>
               <label class="option-pill"><input type="radio" name="projectType" value="Presentation"><span>Presentation</span></label>
+              <label class="option-pill"><input type="radio" name="projectType" value="Other"><span>Other</span></label>
             </div>
+            <div class="form-error">Choose what we are creating.</div>
           </div>
+
+
+          <div class="form-group" id="detailsGroup" aria-live="polite" hidden></div>
+
+          <!-- 3. Budget -->
           <div class="form-group">
             <div class="form-label">Budget</div>
-            <div class="form-options cols-5" role="radiogroup" aria-label="Budget">
-              <label class="option-pill"><input type="radio" name="budget" value="up to $1,000" checked><span>≤ $1K</span></label>
-              <label class="option-pill"><input type="radio" name="budget" value="$1,000 – $3,000"><span>$1–3K</span></label>
-              <label class="option-pill"><input type="radio" name="budget" value="$3,000 – $10,000"><span>$3–10K</span></label>
-              <label class="option-pill"><input type="radio" name="budget" value="$10,000+"><span>$10K+</span></label>
-              <label class="option-pill"><input type="radio" name="budget" value="Let's discuss"><span>Discuss</span></label>
+            <div class="form-options" role="radiogroup" aria-label="Budget">
+              <label class="option-pill"><input type="radio" name="budget" value="up to $1,000"><span>up to $1K</span></label>
+              <label class="option-pill"><input type="radio" name="budget" value="$1 000 – $3 000"><span>$1–3K</span></label>
+              <label class="option-pill"><input type="radio" name="budget" value="$3 000 – $10 000"><span>$3–10K</span></label>
+              <label class="option-pill"><input type="radio" name="budget" value="$10 000+"><span>$10K+</span></label>
+              <label class="option-pill"><input type="radio" name="budget" value="Need an estimate"><span>Need an estimate</span></label>
             </div>
           </div>
+
+          <!-- 4. When do you need it -->
           <div class="form-group">
-            <div class="form-label">Timeline</div>
-            <div class="form-options cols-4" role="radiogroup" aria-label="Timeline">
-              <label class="option-pill"><input type="radio" name="timeline" value="Urgent (within 2 weeks)" checked><span>Urgent</span></label>
-              <label class="option-pill"><input type="radio" name="timeline" value="Within a month"><span>Month</span></label>
-              <label class="option-pill"><input type="radio" name="timeline" value="2–3 months"><span>2–3 mo</span></label>
-              <label class="option-pill"><input type="radio" name="timeline" value="Flexible / not urgent"><span>Flexible</span></label>
+            <div class="form-label">When do you need it?</div>
+            <div class="form-options" role="radiogroup" aria-label="When do you need it">
+              <label class="option-pill"><input type="radio" name="timeline" value="Urgently"><span>Urgently</span></label>
+              <label class="option-pill"><input type="radio" name="timeline" value="Within 1–2 weeks"><span>1–2 weeks</span></label>
+              <label class="option-pill"><input type="radio" name="timeline" value="Within a month"><span>Within a month</span></label>
+              <label class="option-pill"><input type="radio" name="timeline" value="Flexible"><span>Flexible</span></label>
             </div>
           </div>
-          <div class="form-group">
-            <div class="form-label">Contact method</div>
-            <div class="form-options cols-4" role="radiogroup" aria-label="Contact method">
-              <label class="option-pill"><input type="radio" name="contactMethod" value="Email" checked><span>Email</span></label>
+
+
+          <div class="form-group" data-field="contactMethod">
+            <div class="form-label">Where should I reply?<em>*</em></div>
+            <div class="form-options" role="radiogroup" aria-label="Where should I reply">
               <label class="option-pill"><input type="radio" name="contactMethod" value="Telegram"><span>Telegram</span></label>
-              <label class="option-pill"><input type="radio" name="contactMethod" value="WhatsApp"><span>WhatsApp</span></label>
-              <label class="option-pill"><input type="radio" name="contactMethod" value="Marketplace"><span>Marketplace</span></label>
+              <label class="option-pill"><input type="radio" name="contactMethod" value="Email"><span>Email</span></label>
             </div>
+            <div class="form-error">Choose where I should reply.</div>
           </div>
-          <label class="form-field" id="marketplaceField" hidden>
-            <span>Which marketplace</span>
-            <input name="marketplace" type="text" placeholder="Upwork, Fiverr, etc.">
+
+          <label class="form-field" data-field="contact" id="contactField" hidden>
+            <input id="contactInput" name="contact" type="text" required placeholder="@username" autocomplete="off" aria-label="Contact">
+            <div class="form-error" id="contactError">Leave your contact so I can reply.</div>
           </label>
-          <label class="form-field" id="contactField">
-            <span id="contactLabel">Your email</span>
-            <input id="contactInput" name="contact" type="email" autocomplete="email" required placeholder="you@example.com">
-          </label>
-          <div class="direct-cta" id="directCta">
-            <p class="direct-cta-note" id="directCtaNote">DM me directly — fastest way.</p>
-            <a class="direct-cta-btn" id="directCtaBtn" href="https://t.me/anestiiz" target="_blank" rel="noopener">
-              <span id="directCtaLabel">Message on Telegram</span>
-              <img class="icon-arrow-up" src="Icons/Arrow Right Up.svg" alt="">
-            </a>
+
+
+          <div class="details-toggle-wrap">
+            <button type="button" class="details-toggle" id="detailsToggle" aria-expanded="false" aria-controls="notesField">
+              <span class="details-toggle-icon">+</span>
+              Add details or a reference
+            </button>
+            <label class="form-field" id="notesField" hidden>
+              <textarea name="notes" rows="3" placeholder="Comment, reference link, or anything you already have…"></textarea>
+            </label>
           </div>
-          <button class="form-submit" type="submit">Send request <img class='icon-arrow-up' src='Icons/Arrow Right Up.svg' alt=''></button>
+
+          <button class="form-submit" type="submit">Send brief <img class='icon-arrow-up' src='Icons/Arrow Right Up.svg' alt=''></button>
+          <p class="form-note">Only the project type and contact are required. Everything else is optional.</p>
           <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
         </form>
-        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
-          <span class="badge">Request sent</span>
-          <h2 id="formSuccessTitle">I'll reply within 15 minutes.</h2>
-          <p id="formSuccessNote">Need me sooner? DM me on Telegram <a href="https://t.me/anestiiz" target="_blank" rel="noopener">@anestiiz</a>.</p>
+
+      </div>
+    </section>
+    </div>
+
+    <section class="brief-done" id="briefDone" role="status" aria-live="polite" hidden>
+      <div class="brief-done-inner">
+        <div class="brief-done-check" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="21" stroke="currentColor" stroke-width="1.25" opacity=".35"/>
+            <path d="M14 22.5l5 5L30 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
+        <h1 class="brief-done-title">Brief sent!</h1>
+        <p class="brief-done-note">Thank you! I will contact you using the details provided.</p>
       </div>
     </section>
   </main>
@@ -216,126 +248,252 @@
   <script>
     const TELEGRAM_BOT_TOKEN = '8493465630:AAGq14a_MWpJ9nlTQnn4M6eZo3JfeELdTRY';
     const TELEGRAM_CHAT_ID   = '5631116037';
+    const STORAGE_KEY        = 'anestiiz_brief_draft_v3';
 
-    const requestForm = document.getElementById('requestForm');
-    const marketplaceField = document.getElementById('marketplaceField');
-    const marketplaceInput = marketplaceField ? marketplaceField.querySelector('input') : null;
-    const formStatus = document.getElementById('formStatus');
-    const formSuccess = document.getElementById('formSuccess');
-    const submitBtn = requestForm ? requestForm.querySelector('.form-submit') : null;
-    const contactField = document.getElementById('contactField');
-    const contactInput = document.getElementById('contactInput');
-    const directCta = document.getElementById('directCta');
-    const directCtaBtn = document.getElementById('directCtaBtn');
-    const directCtaLabel = document.getElementById('directCtaLabel');
-    const directCtaNote = document.getElementById('directCtaNote');
+    const requestForm   = document.getElementById('requestForm');
+    const formStatus    = document.getElementById('formStatus');
+    const mainForm      = document.getElementById('mainForm');
+    const briefDone     = document.getElementById('briefDone');
+    const submitBtn     = requestForm ? requestForm.querySelector('.form-submit') : null;
+    const detailsGroup  = document.getElementById('detailsGroup');
+    const contactField  = document.getElementById('contactField');
+    const contactInput  = document.getElementById('contactInput');
+    const contactError  = document.getElementById('contactError');
+    const detailsToggle = document.getElementById('detailsToggle');
+    const notesField    = document.getElementById('notesField');
 
-    const directChannels = {
-      'Telegram':    { href: 'https://t.me/anestiiz', label: 'Message on Telegram — @anestiiz', note: 'DM me on Telegram — fastest way to reach me.' },
-      'WhatsApp':    { href: 'https://t.me/anestiiz', label: 'Message me on Telegram',           note: 'My WhatsApp is private — ping me on Telegram and I\'ll share the number.' },
-      'Marketplace': { href: 'https://t.me/anestiiz', label: 'Message on Telegram',              note: 'Submit the brief — I\'ll reach out on the marketplace. Or DM me on Telegram now.' }
+    const detailsSchemas = {
+      'AI video':        { label: 'What is it for?',     options: ['Advertising', 'Social media', 'Music video', 'Other', 'Need guidance'] },
+      'AI photoshoot': { label: 'Who is it for?',     options: ['For myself', 'For a brand', 'For a product', 'Other'] },
+      'App':      { label: 'What is the task?', options: ['From scratch', 'Redesign', 'Improvements', 'Need guidance'] },
+      'Website':            { label: 'What is the task?', options: ['From scratch', 'Redesign', 'Improvements', 'Need guidance'] },
+      'Presentation':     { label: 'What do you need?',    options: ['Create from scratch', 'Design existing content', 'Refresh the design', 'Need guidance'] }
     };
 
-    const updateContactField = () => {
-      if (!requestForm || !contactField || !contactInput) return;
+    const contactPresets = {
+      'Telegram': { placeholder: '@username',        type: 'text',  autocomplete: 'username', error: 'Leave your Telegram @username.' },
+      'Email':    { placeholder: 'name@example.com', type: 'email', autocomplete: 'email',    error: 'Leave your email so I can reply.' }
+    };
+
+    function renderDetails(projectType, draft) {
+      if (!detailsGroup) return;
+      detailsGroup.innerHTML = '';
+      const schema = detailsSchemas[projectType];
+      if (!schema) { detailsGroup.hidden = true; return; }
+
+      const lbl = document.createElement('div');
+      lbl.className = 'form-label';
+      lbl.textContent = schema.label;
+      detailsGroup.appendChild(lbl);
+
+      const opts = document.createElement('div');
+      opts.className = 'form-options';
+      opts.setAttribute('role', 'radiogroup');
+      opts.setAttribute('aria-label', schema.label);
+      schema.options.forEach(opt => {
+        const l = document.createElement('label');
+        l.className = 'option-pill';
+        const i = document.createElement('input');
+        i.type = 'radio';
+        i.name = 'serviceDetail';
+        i.value = opt;
+        if (draft && draft.serviceDetail === opt && schema.options.includes(draft.serviceDetail)) i.checked = true;
+        i.addEventListener('change', saveDraft);
+        const s = document.createElement('span');
+        s.textContent = opt;
+        l.appendChild(i); l.appendChild(s);
+        opts.appendChild(l);
+      });
+      detailsGroup.appendChild(opts);
+      detailsGroup.hidden = false;
+    }
+
+    function updateContactField() {
+      if (!requestForm || !contactField) return;
       const selected = requestForm.querySelector('input[name="contactMethod"]:checked');
-      const key = selected ? selected.value : 'Email';
-      const isEmail = key === 'Email';
-      contactField.hidden = !isEmail;
-      if (isEmail) contactInput.setAttribute('required', 'required');
-      else { contactInput.removeAttribute('required'); contactInput.value = ''; }
-
-      if (!directCta) return;
-      const channel = directChannels[key];
-      if (channel) {
-        directCta.classList.add('is-visible');
-        directCtaBtn.href = channel.href;
-        directCtaLabel.textContent = channel.label;
-        directCtaNote.textContent = channel.note;
-      } else {
-        directCta.classList.remove('is-visible');
+      if (!selected) {
+        contactField.hidden = true;
+        contactInput.removeAttribute('required');
+        contactInput.value = contactInput.value; // keep entered value
+        return;
       }
-    };
+      const preset = contactPresets[selected.value];
+      contactField.hidden = false;
+      contactInput.type = preset.type;
+      contactInput.placeholder = preset.placeholder;
+      contactInput.autocomplete = preset.autocomplete;
+      contactInput.setAttribute('required', 'required');
+      if (contactError) contactError.textContent = preset.error;
+    }
 
-    const toggleMarketplace = () => {
-      if (!marketplaceField || !requestForm) return;
-      const selected = requestForm.querySelector('input[name="contactMethod"]:checked');
-      const show = selected && selected.value === 'Marketplace';
-      marketplaceField.hidden = !show;
-      if (marketplaceInput) {
-        if (show) marketplaceInput.setAttribute('required', 'required');
-        else { marketplaceInput.removeAttribute('required'); marketplaceInput.value = ''; }
+    if (detailsToggle && notesField) {
+      detailsToggle.addEventListener('click', () => {
+        const expanded = detailsToggle.getAttribute('aria-expanded') === 'true';
+        detailsToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        notesField.hidden = expanded;
+        if (!expanded) {
+          const t = notesField.querySelector('textarea');
+          if (t) setTimeout(() => t.focus({ preventScroll: false }), 20);
+        }
+      });
+    }
+
+    function saveDraft() {
+      if (!requestForm) return;
+      const data = new FormData(requestForm);
+      const obj = {};
+      for (const [k, v] of data.entries()) obj[k] = v;
+
+      if (detailsToggle) obj.__detailsOpen = detailsToggle.getAttribute('aria-expanded') === 'true' ? '1' : '';
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); } catch (e) {}
+    }
+    function readDraft() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'); } catch (e) { return null; }
+    }
+    function clearDraft() {
+      try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+    }
+    function restoreDraft() {
+      const draft = readDraft();
+      if (!draft || !requestForm) return;
+
+      if (draft.projectType) {
+        const r = requestForm.querySelector(`input[name="projectType"][value="${draft.projectType}"]`);
+        if (r) r.checked = true;
+        renderDetails(draft.projectType, draft);
       }
-    };
 
-    const setStatus = (msg, kind) => {
+      Object.keys(draft).forEach(name => {
+        if (name === 'projectType' || name === '__detailsOpen') return;
+        const els = requestForm.querySelectorAll(`[name="${name}"]`);
+        if (!els.length) return;
+        if (els[0].type === 'radio') {
+          els.forEach(el => { if (el.value === draft[name]) el.checked = true; });
+        } else {
+          els[0].value = draft[name];
+        }
+      });
+
+      if (draft.__detailsOpen === '1' && detailsToggle && notesField) {
+        detailsToggle.setAttribute('aria-expanded', 'true');
+        notesField.hidden = false;
+      }
+      updateContactField();
+    }
+
+    function clearErrors() {
+      requestForm.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+    }
+    function markInvalid(fieldName, focus) {
+      const wrap = requestForm.querySelector(`[data-field="${fieldName}"]`);
+      if (wrap) wrap.classList.add('is-invalid');
+      if (focus) {
+        const target = requestForm.querySelector(`[name="${fieldName}"]`);
+        if (target) {
+          if (target.type === 'radio') (wrap || target).scrollIntoView({ behavior: 'smooth', block: 'center' });
+          else { target.focus({ preventScroll: false }); }
+        }
+      }
+    }
+    function validate() {
+      clearErrors();
+      const data = new FormData(requestForm);
+      const errors = [];
+      if (!data.get('projectType')) errors.push('projectType');
+      if (!data.get('contactMethod')) errors.push('contactMethod');
+      else if (!(data.get('contact') || '').trim()) errors.push('contact');
+      errors.forEach((name, i) => markInvalid(name, i === 0));
+      return errors.length === 0;
+    }
+
+    function setStatus(msg, kind) {
       if (!formStatus) return;
       formStatus.textContent = msg || '';
       formStatus.classList.remove('is-error');
-      if (kind) formStatus.classList.add('is-' + kind);
-    };
+      if (kind === 'error') formStatus.classList.add('is-error');
+    }
+    function showSuccess() {
+      if (!mainForm || !briefDone) return;
+      mainForm.classList.add('is-fading');
+      setTimeout(() => {
+        mainForm.hidden = true;
+        briefDone.hidden = false;
+        briefDone.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    }
 
-    const successPresets = {
-      'Email':       { title: 'I\'ll reply by email within 15 minutes.',       note: 'Need me sooner? DM me on Telegram <a href="https://t.me/anestiiz" target="_blank" rel="noopener">@anestiiz</a>.' },
-      'Telegram':    { title: 'See you on Telegram.',                            note: 'DM me <a href="https://t.me/anestiiz" target="_blank" rel="noopener">@anestiiz</a> — I\'ll reply within 15 minutes.' },
-      'WhatsApp':    { title: 'Ping me on Telegram to swap numbers.',            note: 'My WhatsApp is private — write to <a href="https://t.me/anestiiz" target="_blank" rel="noopener">@anestiiz</a> and I\'ll share the number.' },
-      'Marketplace': { title: 'I\'ll reach out on the marketplace within 15 minutes.', note: 'Urgent? DM me on Telegram <a href="https://t.me/anestiiz" target="_blank" rel="noopener">@anestiiz</a>.' }
-    };
-
-    const showSuccess = (method) => {
-      if (!formSuccess || !requestForm) return;
-      const preset = successPresets[method] || successPresets['Email'];
-      const titleEl = document.getElementById('formSuccessTitle');
-      const noteEl  = document.getElementById('formSuccessNote');
-      if (titleEl) titleEl.textContent = preset.title;
-      if (noteEl)  noteEl.innerHTML     = preset.note;
-      requestForm.classList.add('is-hidden');
-      formSuccess.classList.add('is-visible');
-      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    };
-
-    const buildMessage = (data) => {
+    function buildMessage(data) {
+      const type   = data.get('projectType') || '—';
+      const detail = data.get('serviceDetail');
       const method = data.get('contactMethod') || '—';
       const lines = [
-        '🎯 <b>New request from anestiiz.com</b>',
+        '📩 <b>New brief from anestiiz.com</b>',
         '',
-        `<b>Project type:</b> ${data.get('projectType') || '—'}`,
-        `<b>Budget:</b> ${data.get('budget') || '—'}`,
-        `<b>Timeline:</b> ${data.get('timeline') || '—'}`,
-        `<b>Contact method:</b> ${method}`
+        `<b>What are we creating:</b> ${type}`
       ];
-      if (method === 'Marketplace' && data.get('marketplace')) {
-        lines.push(`<b>Marketplace:</b> ${data.get('marketplace')}`);
+      if (detail && detailsSchemas[type]) {
+        lines.push(`<b>${detailsSchemas[type].label}</b> ${detail}`);
       }
-      if (method === 'Email') {
-        lines.push(`<b>Email:</b> ${data.get('contact') || '—'}`);
-      } else {
-        lines.push(`<i>Client will reach out via ${method}.</i>`);
-      }
-      lines.push('', `<i>${new Date().toLocaleString('en-GB')}</i>`);
+      const budget   = data.get('budget');
+      const timeline = data.get('timeline');
+      if (budget)   lines.push(`<b>Budget:</b> ${budget}`);
+      if (timeline) lines.push(`<b>Timeline:</b> ${timeline}`);
+      const notes = (data.get('notes') || '').trim();
+      if (notes) lines.push('', `<b>Details:</b> ${notes}`);
+      lines.push('', `<b>Reply via:</b> ${method}`);
+      lines.push(`<b>Contact:</b> ${(data.get('contact') || '').trim() || '—'}`);
+      lines.push('', `<i>${new Date().toLocaleString('ru-RU')}</i>`);
       return lines.join('\n');
-    };
+    }
 
+    // --- Wire ---
     if (requestForm) {
-      requestForm.querySelectorAll('input[name="contactMethod"]').forEach(r => r.addEventListener('change', () => {
-        toggleMarketplace();
-        updateContactField();
-      }));
-      toggleMarketplace();
+      requestForm.addEventListener('input', saveDraft);
+      requestForm.addEventListener('change', saveDraft);
+
+      requestForm.querySelectorAll('input[name="projectType"]').forEach(r => {
+        r.addEventListener('change', () => {
+
+          renderDetails(r.value, null);
+          saveDraft();
+        });
+      });
+
+      requestForm.querySelectorAll('input[name="contactMethod"]').forEach(r => {
+        r.addEventListener('change', () => { updateContactField(); saveDraft(); });
+      });
+
+      restoreDraft();
       updateContactField();
+
+      ['projectType', 'contactMethod', 'contact'].forEach(name => {
+        requestForm.querySelectorAll(`[name="${name}"]`).forEach(el => {
+          el.addEventListener('input', () => {
+            const wrap = requestForm.querySelector(`[data-field="${name}"]`);
+            if (wrap) wrap.classList.remove('is-invalid');
+          });
+          el.addEventListener('change', () => {
+            const wrap = requestForm.querySelector(`[data-field="${name}"]`);
+            if (wrap) wrap.classList.remove('is-invalid');
+          });
+        });
+      });
 
       requestForm.addEventListener('submit', async (event) => {
         event.preventDefault();
-        if (!requestForm.reportValidity()) return;
-
-        const data = new FormData(requestForm);
-        const method = data.get('contactMethod') || 'Email';
-        const text = buildMessage(data);
-
-        if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
-          setStatus('Form is offline. DM @anestiiz on Telegram.', 'error');
+        if (!validate()) {
+          setStatus('Check the highlighted fields.', 'error');
           return;
         }
+        setStatus('', null);
+
+        if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+          setStatus('Sending is temporarily unavailable — message me on Telegram @anestiiz.', 'error');
+          return;
+        }
+
+        const data = new FormData(requestForm);
+        const text = buildMessage(data);
 
         if (submitBtn) submitBtn.disabled = true;
         setStatus('Sending…', null);
@@ -348,15 +506,15 @@
           });
           const json = await res.json();
           if (!res.ok || !json.ok) throw new Error(json.description || 'sendMessage failed');
+
+          clearDraft();
           setStatus('', null);
-          requestForm.reset();
-          toggleMarketplace();
-          updateContactField();
-          showSuccess(method);
+          showSuccess();
           if (window.ym) window.ym(window.__ymId, 'reachGoal', 'brief_submitted');
         } catch (err) {
           console.error(err);
-          setStatus('Something went wrong. DM @anestiiz on Telegram.', 'error');
+
+          setStatus('Could not send. Please try again — your answers are saved.', 'error');
         } finally {
           if (submitBtn) submitBtn.disabled = false;
         }
