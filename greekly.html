@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Greekly — Real news, real learning · anestiiz</title>
-  <meta name="description" content="Greekly mobile app case study — news-based language learning with a warm character-led visual system.">
+  <title>Greekly — Greek through the news · anestiiz</title>
+  <meta name="description" content="Greekly mobile app case study: learning Greek through real news, contextual word translation, and short quizzes.">
   <link rel="icon" type="image/png" href="assets/favicon/favicon.png"><link rel="apple-touch-icon" href="assets/favicon/favicon.png">
   <style>
     @font-face{font-family:"AkzidenzGroteskPro";src:url("assets/fonts/akzidenzgroteskpro-regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
@@ -107,55 +107,55 @@
     html[lang="ru"] .case-head h2{font-size:clamp(52px,6.5vw,104px)}
     html[lang="ru"] .case-cta h3{font-size:clamp(28px,3.4vw,56px)}
     @media(max-width:640px){html[lang="ru"] .case-head h2{font-size:44px}}
+
+    /* Expanded Greekly case */
+    .gk-section{padding-block:clamp(76px,10vw,160px);border-top:1px solid var(--line)}.gk-hero{padding-top:clamp(56px,8vw,128px);padding-bottom:clamp(72px,9vw,144px)}.gk-hero-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(420px,1.1fr);gap:clamp(48px,7vw,112px);align-items:center}.gk-eyebrow{font-size:12px;line-height:20px;letter-spacing:.16em;text-transform:uppercase;color:var(--case-accent);font-weight:700}.gk-hero h1{margin:24px 0 28px;font-size:clamp(64px,7.6vw,132px);line-height:.86;font-weight:500;letter-spacing:-.05em}.gk-lead{margin:0;max-width:690px;color:var(--muted);font-size:clamp(18px,1.5vw,24px);line-height:1.45}.gk-hero-art{position:relative;aspect-ratio:1;overflow:hidden;border-radius:32px;background:var(--case-surface);box-shadow:0 32px 100px rgba(239,146,0,.16)}.gk-hero-art img{width:100%;height:100%;object-fit:cover;display:block}
+    .gk-section-head{display:grid;grid-template-columns:.65fr 1.35fr;gap:clamp(36px,7vw,120px);align-items:start;margin-bottom:clamp(42px,6vw,88px)}.gk-section h2{margin:0;font-size:clamp(48px,5.8vw,96px);line-height:.92}.gk-copy{max-width:720px}.gk-copy p{margin:24px 0 0;color:var(--muted);font-size:18px;line-height:1.55}.gk-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.gk-flow-card{min-width:0}.gk-flow-media{aspect-ratio:3/4;border-radius:24px;overflow:hidden;background:var(--case-surface)}.gk-flow-media img{width:100%;height:100%;object-fit:cover;display:block}.gk-flow-card:nth-child(1) img{object-position:50% 38%}.gk-flow-card:nth-child(2) img{object-position:50% 22%}.gk-flow-card:nth-child(3) img{object-position:50% 70%}.gk-flow-card:nth-child(4) img{object-position:50% 22%}.gk-flow-num{display:block;margin-top:22px;color:var(--case-accent);font-size:12px;letter-spacing:.14em}.gk-flow-card h3{margin:10px 0;font-size:28px;line-height:1}.gk-flow-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+    .gk-feature{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(340px,.98fr);gap:clamp(40px,7vw,112px);align-items:center}.gk-feature.reverse{grid-template-columns:minmax(340px,.98fr) minmax(0,1.02fr)}.gk-feature.reverse .gk-media{order:2}.gk-media{aspect-ratio:4/5;border-radius:32px;overflow:hidden;background:var(--case-surface)}.gk-media img{width:100%;height:100%;object-fit:cover;display:block}.gk-media.translation img{object-position:50% 55%}.gk-media.quiz img{object-position:50% 22%}.gk-feature h2,.gk-character h2{margin:20px 0 24px;font-size:clamp(48px,5.2vw,84px);line-height:.92}.gk-feature p,.gk-character p{margin:0;color:var(--muted);font-size:18px;line-height:1.55}.gk-annotations{display:grid;gap:12px;margin-top:28px}.gk-note{padding:16px;border-left:2px solid var(--case-accent);background:rgba(255,255,255,.035);color:var(--muted);font-size:14px;line-height:1.45}.gk-note strong{display:block;color:var(--ink);margin-bottom:4px}
+    .gk-character{display:grid;grid-template-columns:minmax(300px,.8fr) 1.2fr;gap:clamp(40px,7vw,112px);align-items:center}.gk-character-image{border-radius:32px;overflow:hidden;background:var(--case-surface)}.gk-character-image img{display:block;width:100%;height:auto}.gk-kit{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(40px,7vw,112px)}.gk-palette{display:flex;gap:12px;margin-top:32px}.gk-swatch{width:72px;aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.16)}.gk-swatch:nth-child(1){background:#ef9200}.gk-swatch:nth-child(2){background:#fff7e9}.gk-swatch:nth-child(3){background:#222}.gk-kit-list{display:grid;border-top:1px solid var(--line)}.gk-kit-row{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}.gk-kit-row span{color:var(--case-accent);font-size:12px}.gk-kit-row strong{font-size:20px}.gk-kit-row p{margin:8px 0 0;color:var(--muted);font-size:15px;line-height:1.5}
+    .gk-promo{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;padding:clamp(36px,4vw,64px);border:1px solid rgba(239,146,0,.25);border-radius:24px;background:linear-gradient(120deg,rgba(239,146,0,.12),rgba(255,255,255,.025))}.gk-promo h2{margin:18px 0 20px;font-size:clamp(42px,4.8vw,76px);line-height:.94}.gk-promo p{margin:0;max-width:720px;color:var(--muted);font-size:18px;line-height:1.5}.gk-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:999px;border:var(--pill-border);background:var(--pill-bg);box-shadow:var(--pill-shadow);color:#fff;font-size:14px;font-weight:600;white-space:nowrap;transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}.gk-btn:hover{transform:translateY(-1px);filter:brightness(1.06);box-shadow:0 16px 40px rgba(255,0,106,.42)}.gk-btn img{width:16px;height:16px;filter:brightness(0) invert(1)}.gk-final{text-align:center;padding-block:clamp(96px,12vw,190px)}.gk-final h2{margin:0 auto 28px;max-width:980px;font-size:clamp(56px,7vw,112px);line-height:.9}.gk-final p{margin:0 auto 32px;max-width:700px;color:var(--muted);font-size:18px;line-height:1.55}
+    @media(max-width:1000px){.gk-hero-grid,.gk-section-head,.gk-feature,.gk-feature.reverse,.gk-character,.gk-kit{grid-template-columns:1fr}.gk-feature.reverse .gk-media{order:0}.gk-flow{grid-template-columns:repeat(2,1fr)}.gk-promo{grid-template-columns:1fr;align-items:start}.gk-section-head{gap:24px}}@media(max-width:640px){.gk-hero{padding-top:48px}.gk-hero-grid{gap:40px}.gk-hero h1{font-size:52px;line-height:.94}.gk-hero-art,.gk-media,.gk-character-image{border-radius:20px}.gk-section{padding-block:72px}.gk-section h2,.gk-feature h2,.gk-character h2{font-size:44px;line-height:.96}.gk-copy p,.gk-feature p,.gk-character p,.gk-promo p{font-size:16px}.gk-flow{grid-template-columns:1fr}.gk-flow-media{aspect-ratio:4/5}.gk-promo{padding:24px;border-radius:16px}.gk-promo h2{font-size:40px}.gk-btn{white-space:normal}.gk-final h2{font-size:48px}}
+    .store-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.store-button{width:169px;height:55px;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 24px;border-radius:20px;font:700 16px/18px "Manrope",sans-serif;letter-spacing:0;white-space:nowrap;overflow:hidden;transition:transform .18s ease,filter .18s ease}.store-button:hover{transform:translateY(-1px);filter:brightness(1.04)}.store-button img{width:24px;height:24px;object-fit:contain;flex:0 0 24px}.store-button.apple{color:#fff;border:0;border-bottom:4px solid #343434;background:radial-gradient(ellipse 110% 240% at 50% 0%,#646464 0%,#4a4a4a 100%)}.store-button.google{color:#2f2f2f;border:0;border-bottom:4px solid #e6e6e6;background:radial-gradient(ellipse 110% 240% at 50% 0%,#fff 0%,#f1f1f1 100%)}(max-width:420px){.store-buttons{display:grid;grid-template-columns:1fr}.store-button{width:100%;max-width:220px}}
   </style>
   <script defer src="assets/js/analytics.js"></script>
 </head>
 <body>
   <header>
     <div class="wrap header-row">
-      <a class="back-link" href="index.html"><img class='icon-arrow-left' src='Icons/Arrow Left.svg' alt=''> All work</a>
+      <a class="back-link" href="index.html#work"><img class='icon-arrow-left' src='Icons/Arrow Left.svg' alt=''> All work</a>
       <div class="header-right">Case 03 / Mobile design</div>
     </div>
   </header>
 
   <main>
-    <section class="case-hero wrap">
-      <div class="case-head reveal">
-        <div>
-          <div class="case-index">03 / Mobile design</div>
-          <h2>Greekly.<br><span class='orange'>Real news,</span><br>real learning.</h2>
-        </div>
-        <div class="case-side">
-          <img class="case-logo" src="assets/greekly/Logo.png" alt="Greekly visual identity character logo">
-          <div class="case-lead">Language learning built on real content, interactive vocabulary and short quizzes for retention.</div>
-          <div class="case-facts"><span>UX / UI</span><span>EdTech</span><span>Mobile product</span><span>Character</span></div>
-        </div>
+    <section class="gk-hero wrap">
+      <div class="gk-hero-grid">
+        <div class="reveal"><div class="gk-eyebrow">UX/UI Design · EdTech · Mobile App</div><h1>Greekly.<br><em>Greek through the news.</em></h1><p class="gk-lead">An app for learning Greek through real news. Reading, contextual word translation, and short quizzes come together in one flow, helping users explore the language in context.</p><div class="store-buttons" aria-label="Download Greekly"><a class="store-button apple" href="https://apps.apple.com/hn/app/greekly-language-learning/id6747726049?l=en-GB&amp;platform=ipad" target="_blank" rel="noopener noreferrer"><img src="Icons/apple-store.svg" alt="">App Store</a><a class="store-button google" href="https://play.google.com/store/apps/details?id=com.codeaxolot.langtutor" target="_blank" rel="noopener noreferrer"><img src="Icons/google-play.svg" alt="">Google Play</a></div></div>
+        <figure class="gk-hero-art reveal"><img src="assets/greekly/Cover.webp" alt="Greekly mobile app for learning Greek"></figure>
       </div>
-
-      <div class="sequence reveal" aria-label="Greekly project screens">
-        <img src="assets/greekly/1.png" alt="Greekly screen 1">
-        <img src="assets/greekly/2.png" alt="Greekly screen 2">
-        <img src="assets/greekly/3.png" alt="Greekly screen 3">
-        <img src="assets/greekly/4.png" alt="Greekly screen 4">
-        <img src="assets/greekly/5.png" alt="Greekly screen 5">
-      </div>
-
-      <div class="case-notes reveal">
-        <div>
-          <h3>News as a lesson.</h3>
-          <p>Instead of textbook drills — real articles matched to your level. Vocabulary lives inside the story, and context matters more than translation.</p>
-        </div>
-        <div>
-          <h3>A warm character system.</h3>
-          <p>A friendly mascot carries the tone across everything — from onboarding to error states, turning progress into a personal journey without pressure.</p>
-        </div>
-      </div>
-
-      <div class="case-cta reveal">
-        <h3>Have an idea for a mobile product? <em>Let&rsquo;s make it.</em></h3>
-        <a class="cta-btn" href="index.html#contact">Get in touch <img class='icon-arrow-up light' src='Icons/Arrow Right Up.svg' alt=''></a>
-      </div>
+      <!-- Role, scope, and project status will be added after the facts are confirmed. -->
     </section>
+
+    <section class="gk-section wrap"><div class="gk-section-head reveal"><div class="gk-eyebrow">The challenge</div><div class="gk-copy"><h2>From an interesting story to <em>language practice.</em></h2><p>Greekly is built around material people genuinely want to read. The interface needs to connect choosing an article, understanding unfamiliar vocabulary, and reinforcing what was read in one coherent flow.</p><p>Users should understand where to begin, how to get help while reading, and what to do after the article.</p></div></div></section>
+
+    <section class="gk-section wrap"><div class="gk-section-head reveal"><div class="gk-eyebrow">Core flow</div><h2>Choose. Read. Understand. <em>Reinforce.</em></h2></div><div class="gk-flow">
+      <article class="gk-flow-card reveal"><div class="gk-flow-media"><img src="assets/greekly/2.png" alt="A news article screen in Greekly"></div><span class="gk-flow-num">01</span><h3>Find a story</h3><p>The user opens a selected news story and moves into reading.</p></article>
+      <article class="gk-flow-card reveal"><div class="gk-flow-media"><img src="assets/greekly/2.png" alt="Reading a Greek news story"></div><span class="gk-flow-num">02</span><h3>Read in context</h3><p>New vocabulary appears inside a story, where meaning connects to what is happening.</p></article>
+      <article class="gk-flow-card reveal"><div class="gk-flow-media"><img src="assets/greekly/3.png" alt="A contextual word translation in Greekly"></div><span class="gk-flow-num">03</span><h3>Understand a word</h3><p>Translation and pronunciation help clarify a word without leaving the article.</p></article>
+      <article class="gk-flow-card reveal"><div class="gk-flow-media"><img src="assets/greekly/5.png" alt="A quiz after an article in Greekly"></div><span class="gk-flow-num">04</span><h3>Check understanding</h3><p>A short quiz completes the flow and brings the user back to the material.</p></article>
+    </div></section>
+
+    <section class="gk-section wrap"><div class="gk-feature"><div class="gk-media translation reveal"><img src="assets/greekly/3.png" alt="An open word translation card inside an article"></div><div class="reveal"><div class="gk-eyebrow">Reading and translation</div><h2>Help at the moment <em>it is needed.</em></h2><p>The reading flow keeps a word connected to its sentence. Users can open a translation for unfamiliar vocabulary and then continue with the story. This is the point where reading becomes active language practice.</p><div class="gk-annotations"><div class="gk-note"><strong>The word stays in context</strong>The selected word is highlighted directly inside the article.</div><div class="gk-note"><strong>Help beside the action</strong>The card presents translation, transcription, and pronunciation.</div></div></div></div></section>
+
+    <section class="gk-section wrap"><div class="gk-feature reverse"><div class="gk-media quiz reveal"><img src="assets/greekly/5.png" alt="A Greekly quiz question and answer options"></div><div class="reveal"><div class="gk-eyebrow">Reinforcement</div><h2>The article has <em>a next step.</em></h2><p>After reading, the user moves into a short quiz. It connects the story with a check of what was understood within the same flow. The available design shows a question, answer options, and an expandable explanation.</p><div class="gk-annotations"><div class="gk-note"><strong>Visible progress</strong>The question number and progress bar show the user's place in the quiz.</div><div class="gk-note"><strong>Answer and explanation</strong>The user selects an option and can reveal an explanation when needed.</div></div></div></div></section>
+
+    <section class="gk-section wrap"><div class="gk-character"><div class="gk-character-image reveal"><img src="assets/greekly/1.png" alt="Greekly characters alongside user feedback"></div><div class="reveal"><div class="gk-eyebrow">Character and tone</div><h2>Language <em>with character.</em></h2><p>Meme-inspired characters give Greekly a recognizable voice. They connect the visual identity with product communication and make the experience feel less formal. In the available materials, the characters support product messages and help introduce key features.</p></div></div></section>
+
+    <section class="gk-section wrap"><div class="gk-kit"><div class="reveal"><div class="gk-eyebrow">Visual language</div><h2>One character across <em>the whole interface.</em></h2><p class="gk-lead">A warm orange accent, light surfaces, large typography, and soft shapes connect Greekly's product screens and communication.</p><div class="gk-palette" aria-label="Greekly core colors"><span class="gk-swatch" title="Orange"></span><span class="gk-swatch" title="Light surface"></span><span class="gk-swatch" title="Primary text"></span></div></div><div class="gk-kit-list reveal"><div class="gk-kit-row"><span>01</span><div><strong>Typography and emphasis</strong><p>Large headlines and orange highlights guide attention.</p></div></div><div class="gk-kit-row"><span>02</span><div><strong>Cards and surfaces</strong><p>Light cards with soft corners separate controls from content.</p></div></div><div class="gk-kit-row"><span>03</span><div><strong>Learning states</strong><p>Progress, word translation, difficulty settings, and quizzes share one visual rhythm.</p></div></div></div></div></section>
+
+    <!-- The contribution and outcome section will be added after role, scope, and status are confirmed. -->
+    <section class="gk-section wrap"><div class="gk-promo reveal"><div><div class="gk-eyebrow">AI video</div><h2>Greekly beyond the interface.</h2><p>I also created a series of AI promotional videos for Greekly. The separate case study shows how the product's character translates into motion.</p></div><a class="gk-btn" href="greekly-promo.html">View Greekly promo videos <img src="Icons/Arrow Right Up.svg" alt=""></a></div></section>
+    <section class="gk-final wrap reveal"><h2>Building <em>an app?</em></h2><p>I can help shape the user flows and create an expressive interface around your product's goals.</p><a class="gk-btn" href="brief.html">Discuss a project <img src="Icons/Arrow Right Up.svg" alt=""></a></section>
   </main>
 
   <footer>
