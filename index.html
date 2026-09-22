@@ -81,6 +81,7 @@
         <a class="featured-card reveal" href="greekly.html"><img src="assets/greekly/Cover.webp" alt="Greekly"><div><span>App · UX/UI</span><h3>Greekly</h3><p>Learning Greek through the news: contextual reading, word translation, and short quizzes.</p><strong>View case study →</strong></div></a>
         <a class="featured-card reveal" href="neuro.html"><picture class="featured-collage"><img src="assets/neuro/main/1.png" alt="AI photoshoot in a blue look"><img src="assets/neuro/1/4.png" alt="Warm AI portrait"><img src="assets/neuro/2/2.png" alt="Light editorial AI portrait"></picture><div><span>AI photography</span><h3>AI photoshoots</h3><p>A series of AI photoshoots exploring portraits, styling, and light.</p><strong>View case study →</strong></div></a>
         <a class="featured-card reveal" href="sites/raduga-detskiy-center/index.html" target="_blank" rel="noopener"><img src="sites/raduga-detskiy-center/hero.webp" alt="Raduga kids' center website"><div><span>Website · UX/UI</span><h3>Raduga</h3><p>A kids' center landing page with clear structure, trust, and an easy booking path.</p><strong>Visit website →</strong></div></a>
+        <a class="featured-card reveal" href="presentations/116-trophy-cyprus.html"><img src="assets/media/presentations/116-trophy-cyprus/1.png" alt="116 Trophy Cyprus LTD presentation"><div><span>Presentation</span><h3>116 Trophy Cyprus</h3><p>A brand presentation with a distinctive visual system and a clear narrative for its key messages.</p><strong>View case study →</strong></div></a>
       </div>
       <nav class="portfolio-links" aria-label="Portfolio categories"><a href="ai-creative.html">AI creative</a><a href="apps.html">Apps</a><a href="websites.html">Websites</a><a href="presentations.html">Presentations</a></nav>
     </section>
@@ -459,8 +460,7 @@ const navBars = [
     if (navBars.length) {
       const sectionIds = ['ai','apps','websites','presentations'];
       const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-      const heroForTabs = document.querySelector('.hero');
-      const heroMenuEl = document.querySelector('.hero-menu');
+      const featuredForTabs = document.querySelector('.featured');
       const movePill = (bar, link) => {
         const pill = bar.el.querySelector(bar.pillSel);
         if (!link || !pill) return;
@@ -473,9 +473,7 @@ const navBars = [
       const updateNav = () => {
         const vh = window.innerHeight;
         const centerY = vh / 2;
-        const heroPast = heroMenuEl
-          ? heroMenuEl.getBoundingClientRect().bottom < 20
-          : (!heroForTabs || heroForTabs.getBoundingClientRect().bottom <= 80);
+        const featuredPast = !featuredForTabs || featuredForTabs.getBoundingClientRect().bottom < 20;
         let bestId = null;
         let bestDist = Infinity;
         sections.forEach(s => {
@@ -486,7 +484,7 @@ const navBars = [
           if (dist < bestDist) { bestDist = dist; bestId = s.id; }
         });
         navBars.forEach(bar => {
-          if (bar.isFixed) bar.el.classList.toggle('is-visible', heroPast);
+          if (bar.isFixed) bar.el.classList.toggle('is-visible', featuredPast);
           const links = Array.from(bar.el.querySelectorAll('a[data-target]'));
           const activeId = bestId || 'ai';
           if (activeId) {
