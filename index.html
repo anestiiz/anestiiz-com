@@ -1,15 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/assets/css/buttons.css?v=1">
   <title>anestiiz — Portfolio</title>
   <meta name="description" content="anestiiz portfolio — independent designer and AI creator.">
   <link rel="icon" type="image/png" href="assets/favicon/favicon.png"><link rel="apple-touch-icon" href="assets/favicon/favicon.png">
-  <link rel="stylesheet" href="assets/css/site.css?v=exp1">
-  <script defer src="assets/js/analytics.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css?v=en-sync-1">
+  <script defer src="assets/js/analytics.js?v=en-sync-1"></script>
 </head>
-<body>
+<body class="home-page">
   <header>
     <div class="wrap header-row">
       <a class="logo" href="#top"><span class="logo-text">anestiiz</span><img class="logo-a" src="assets/anestiiz-mark.svg" alt=""></a>
@@ -19,7 +20,7 @@
         <a href="#ai" data-nav="ai-page">Me & AI</a>
       </nav>
       <div class="header-right">
-        <a class="talk-link" href="brief.html">Discuss a Project <img class='icon-arrow-up light' src='Icons/Arrow Right Up.svg' alt=''></a>
+        <a class="talk-link" href="/brief.html">Discuss a Project <img class='icon-arrow-up light' src='Icons/Arrow Right Up.svg' alt=''></a>
         <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileDrawer"><span></span><span></span></button>
         </div>
     </div>
@@ -30,33 +31,46 @@
     <aside class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
       <button class="drawer-close" type="button" aria-label="Close menu" data-drawer-close>×</button>
       <div class="drawer-group-label">Work</div>
-      <a href="ai-creative.html" data-drawer-link>AI creative</a>
-      <a href="apps.html" data-drawer-link>Apps</a>
-      <a href="websites.html" data-drawer-link>Websites</a>
-      <a href="presentations.html" data-drawer-link>Presentations</a>
-      <a href="banners.html" data-drawer-link>Banners</a>
+      <a href="/ai-creative.html" data-drawer-link>AI creative</a>
+      <a href="/apps.html" data-drawer-link>Apps</a>
+      <a href="/websites.html" data-drawer-link>Websites</a>
+      <a href="/presentations.html" data-drawer-link>Presentations</a>
+      <a href="/banners.html" data-drawer-link>Banners</a>
       <div class="drawer-group-label">More</div>
       <a href="#experience" data-drawer-link>My experience</a>
       <a href="#about" data-drawer-link>About</a>
-      <a href="brief.html" data-drawer-link>Discuss a Project</a>
-      <a href="#ai" class="drawer-ai" data-drawer-link><span>✳</span>How I use AI in design</a>
+      <a href="/brief.html" data-drawer-link>Discuss a Project</a>
+      <a href="#ai" class="drawer-ai" data-drawer-link><img class="ai-mark ai-mark-white" width="22" height="22" src="/assets/icons/ai-white.png" alt="">How I use AI in design</a>
     </aside>
   </div>
 
   <main id="top">
     <section class="hero">
-      <picture class="hero-picture">
-        <source media="(max-width: 1024px)" srcset="assets/media/hero-first-screen-mobile.png">
-        <img class="hero-bg" src="assets/media/hero-first-screen.png" alt="I design interfaces. I generate the impossible. anestiiz — independent designer and AI creator">
+      <div class="hero-v2" data-hero-v2 aria-label="anestiiz — independent designer & AI creator">
+        <img class="hero-v2-bg" src="assets/media/hero-v2-bg.webp" alt="" aria-hidden="true">
+        <div class="hero-v2-title" aria-hidden="true">
+          <span>independent</span>
+          <span>designer & AI creator</span>
+        </div>
+        <div class="hero-v2-portrait-wrap" aria-hidden="true">
+          <img class="hero-v2-portrait" src="assets/media/hero-v2-portrait.webp" alt="">
+        </div>
+        <p class="hero-v2-copy">I design digital products<br>and create AI visuals — from the first idea<br>to the final frame.</p>
+        <a class="hero-v2-cta" href="/brief.html">Contact me <img class="icon-arrow-up light" src="Icons/Arrow Right Up.svg" alt=""></a>
+        <div class="hero-v2-shade" aria-hidden="true"></div>
+      </div>
+      <picture class="hero-picture hero-mobile">
+        <source media="(max-width: 1024px)" srcset="assets/media/hero-first-screen-mobile.webp">
+        <img class="hero-bg" src="assets/media/hero-first-screen.webp" alt="I design interfaces and generate the impossible. anestiiz — independent designer & AI creator">
       </picture>
       <div class="hero-menu reveal" aria-label="Work sections">
         <div class="hero-menu-inner">
           <div class="hero-menu-eyebrow">My work</div>
           <nav class="hero-tabs" aria-label="Section select">
-            <a href="ai-creative.html" data-target="ai" class="active"><span class="lbl">AI creative</span></a>
-            <a href="apps.html" data-target="apps"><span class="lbl">Apps</span></a>
-            <a href="websites.html" data-target="websites"><span class="lbl">Websites</span></a>
-            <a href="presentations.html" data-target="presentations"><span class="lbl">Presentations</span></a>
+            <a href="/ai-creative.html" data-target="ai" class="active"><span class="lbl">AI creative</span></a>
+            <a href="/apps.html" data-target="apps"><span class="lbl">Apps</span></a>
+            <a href="/websites.html" data-target="websites"><span class="lbl">Websites</span></a>
+            <a href="/presentations.html" data-target="presentations"><span class="lbl">Presentations</span></a>
             <span class="hero-tabs-pill" aria-hidden="true"></span>
           </nav>
         </div>
@@ -69,21 +83,22 @@
 
     <div class="marquee" aria-hidden="true">
       <div class="track">
-        <span>AI VIDEO. MOBILE APPS. WEBSITES. <b>✳</b></span>
-        <span>AI VIDEO. MOBILE APPS. WEBSITES. <b>✳</b></span>
-        <span>AI VIDEO. MOBILE APPS. WEBSITES. <b>✳</b></span>
-        <span>AI VIDEO. MOBILE APPS. WEBSITES. <b>✳</b></span>
+        <span>AI VIDEO. MOBILE APPS. WEBSITES. <b><img class="ai-mark" width="22" height="22" src="/assets/icons/ai-pink.png" alt=""></b></span>
+        <span>AI VIDEO. MOBILE APPS. WEBSITES. <b><img class="ai-mark" width="22" height="22" src="/assets/icons/ai-pink.png" alt=""></b></span>
+        <span>AI VIDEO. MOBILE APPS. WEBSITES. <b><img class="ai-mark" width="22" height="22" src="/assets/icons/ai-pink.png" alt=""></b></span>
+        <span>AI VIDEO. MOBILE APPS. WEBSITES. <b><img class="ai-mark" width="22" height="22" src="/assets/icons/ai-pink.png" alt=""></b></span>
       </div>
     </div>
 
     <section id="work" class="featured wrap">
       <div class="content-head reveal"><div class="hero-menu-eyebrow">Portfolio categories</div><h2>Choose a direction to explore <em>the work</em>.</h2></div>
-      <div class="featured-grid">
-        <a class="featured-card reveal" href="ai-creative.html"><picture class="featured-collage"><img src="assets/neuro/main/1.png" alt="AI photoshoot in a blue look"><img src="assets/neuro/1/4.png" alt="Warm AI portrait"><img src="assets/neuro/2/2.png" alt="Light editorial AI portrait"></picture><div><span>Category 01</span><h3>AI creative</h3><p>AI video, visual concepts, advertising assets, and AI photoshoots.</p><strong>View all work →</strong></div></a>
-        <a class="featured-card reveal" href="apps.html"><img src="assets/greekly/Cover.webp" alt="Mobile app design"><div><span>Category 02</span><h3>Apps</h3><p>Mobile products, user journeys, and UX/UI interface design.</p><strong>View all work →</strong></div></a>
-        <a class="featured-card reveal" href="websites.html"><img src="sites/raduga-detskiy-center/hero.webp" alt="Website design"><div><span>Category 03</span><h3>Websites</h3><p>Landing pages, services, and interactive web concepts across industries.</p><strong>View all work →</strong></div></a>
-        <a class="featured-card reveal" href="presentations.html"><img src="assets/media/presentations/116-trophy-cyprus/1.png" alt="Presentation design"><div><span>Category 04</span><h3>Presentations</h3><p>Structure, visual systems, and clear communication of key messages.</p><strong>View all work →</strong></div></a>
-        <a class="featured-card reveal" href="banners.html"><img src="assets/banners/cover.webp" alt="Poster and banner design"><div><span>Category 05</span><h3>Banners</h3><p>Poster series, campaign visuals, and narrative graphic design.</p><strong>View all work →</strong></div></a>
+      <div class="featured-grid category-grid">
+        <a class="category-card category-ai reveal" href="/ai-creative.html"><h3>AI video</h3></a>
+        <a class="category-card category-apps reveal" href="/apps.html" aria-label="Apps"></a>
+        <a class="category-card category-sites reveal" href="/websites.html"><h3>Websites</h3></a>
+        <a class="category-card category-presentations reveal" href="/presentations.html"><h3>Presentations</h3></a>
+        <a class="category-card category-neuro reveal" href="/neuro.html"><h3>AI<br>photoshoots</h3></a>
+        <a class="category-card category-banners reveal" href="/banners.html" aria-label="Banners"></a>
       </div>
     </section>
 
@@ -97,15 +112,17 @@
     </section>
 
     <section id="process" class="process wrap">
-      <div class="content-head reveal"><div class="hero-menu-eyebrow">How we work</div><h2>From the brief<br><em>to delivery.</em></h2></div>
-      <ol class="process-grid"><li><span>01</span><h3>Brief</h3><p>We discuss the goal, audience, available materials, timeline, and scope.</p></li><li><span>02</span><h3>Direction</h3><p>We align on the structure, concept, or visual approach.</p></li><li><span>03</span><h3>Creation</h3><p>I develop the work and share progress at the agreed stages.</p></li><li><span>04</span><h3>Delivery</h3><p>I apply the agreed revisions and deliver the materials in the required formats.</p></li></ol>
+      <div class="content-head reveal"><div class="hero-menu-eyebrow">How we work</div><h2>From the brief<br><em>to delivery.</em></h2><p>Four clear stages: we define the brief, choose a direction, create the solution, and prepare the final delivery.</p></div>
+      <ol class="process-grid"><li><img class="process-card-image" src="assets/media/process-task.webp" alt=""><span>01</span><div class="process-card-copy"><h3>Brief</h3><p>We discuss the goal, audience, available materials, timeline, and scope.</p></div></li><li><img class="process-card-image" src="assets/media/process-direction.webp" alt=""><span>02</span><div class="process-card-copy"><h3>Direction</h3><p>We align on the structure, concept, or visual approach.</p></div></li><li><img class="process-card-image" src="assets/media/process-creation.webp" alt=""><span>03</span><div class="process-card-copy"><h3>Creation</h3><p>I develop the work and share progress at the agreed stages.</p></div></li><li><img class="process-card-image" src="assets/media/process-handoff.webp" alt=""><span>04</span><div class="process-card-copy"><h3>Delivery</h3><p>I apply the agreed revisions and deliver the materials in the required formats.</p></div></li></ol>
     </section>
 
     <section id="experience" class="experience wrap">
       <div class="exp-head reveal">
-        <div class="hero-menu-eyebrow">Experience · since 2021</div>
-        <h2>My <em>experience</em></h2>
-        <p class="exp-lead">Working in design since 2021. I combine product interfaces, team leadership, and AI creative — from the first user flow to the final frame.</p>
+        <div class="exp-head-copy">
+          <div class="hero-menu-eyebrow">Experience · since 2021</div>
+          <h2><span class="exp-years-accent">5+ years</span> <em>experience</em></h2>
+          <p class="exp-lead">Working in design since 2021. I combine product interfaces, team leadership, and AI creative — from the first user flow to the final frame.</p>
+        </div>
       </div>
 
       <ol class="exp-list" role="list">
@@ -113,34 +130,34 @@
           <details>
             <summary>
               <div class="exp-when">
-                <div class="exp-when-range">2023 — 2026</div>
+                <div class="exp-when-range">2023 — present</div>
                 <div class="exp-when-dur">3 years</div>
               </div>
               <div class="exp-what">
                 <div class="exp-place">MTS · CVM</div>
                 <div class="exp-title">Design lead</div>
-                <div class="exp-sub">Grew from UX/UI Designer (Oct 2023 — Aug 2024) to Design Lead (from Aug 2024).</div>
+                <div class="exp-sub">Since August 2024. Previously UX/UI Designer, October 2023 — August 2024.</div>
               </div>
               <span class="exp-toggle" aria-hidden="true"></span>
             </summary>
             <div class="exp-body">
-              <p>Customer relationship development and personalized offers. Led a team of designers and stayed hands-on with the work.</p>
+              <p>Customer relationship development and personalized offers. Since 2024 I have led a design team while staying hands-on.</p>
               <ul class="exp-tasks">
-                <li>Ran the design team — reviewing decisions, mockups, and directions.</li>
-                <li>Designed personalized pages, landings, and product flows.</li>
-                <li>Worked through logic, states, errors, and responsive versions.</li>
-                <li>Maintained interface consistency and component work.</li>
-                <li>Collaborated with product, marketing, sales, support, and engineering.</li>
-                <li>Handed off designs to development via Figma DevMode.</li>
+                <li>Running the design team, reviewing decisions and mockups.</li>
+                <li>Designing personalized pages, landing pages, and product flows.</li>
+                <li>Working through logic, states, errors, and responsive versions.</li>
+                <li>Maintaining interface consistency and component systems.</li>
+                <li>Collaborating with product, marketing, sales, support, and engineering.</li>
+                <li>Handing off designs through Figma DevMode.</li>
                 <li>Regular internal design showcases.</li>
               </ul>
               <div class="exp-projects">
                 <div class="exp-projects-label">Selected projects</div>
                 <ul class="exp-projects-list">
-                  <li>Internal platforms — launching marketing campaigns and publishing landings.</li>
-                  <li>Personalized offer pages for tariffs, services, subscriptions, and devices.</li>
-                  <li>Number porting flow — from number entry to store selection on a map.</li>
-                  <li>NBA widget for operators — activation flows, error handling, and sales analytics.</li>
+                  <li>Internal platforms for launching marketing campaigns and publishing landing pages.</li>
+                  <li>Personalized offer pages for plans, services, subscriptions, and devices.</li>
+                  <li>Number porting flow, from number entry to store selection on a map.</li>
+                  <li>NBA widget for operators: activation flows, error handling, and sales analytics.</li>
                 </ul>
               </div>
             </div>
@@ -187,7 +204,7 @@
               <span class="exp-toggle" aria-hidden="true"></span>
             </summary>
             <div class="exp-body">
-              <p>Work on user interfaces and flows — building up UX/UI practice and digital product experience.</p>
+              <p>Work on user interfaces and flows — building UX/UI practice and digital product experience.</p>
               <ul class="exp-tasks">
                 <li>Gathering and refining requirements.</li>
                 <li>Working through user flows.</li>
@@ -304,49 +321,25 @@
     <section id="about" class="about wrap">
       <div class="about-intro">
         <div>
-          <h2 class="reveal">Good design brings clarity.<br>Strong creative makes you feel.</h2>
+          <div class="hero-menu-eyebrow about-eyebrow reveal">About · design + AI</div>
+          <h2 class="about-title reveal">I connect<br><span>design logic</span><br>with <em>creative emotion.</em></h2>
           <div class="about-copy reveal">
             <p>I'm anestiiz — a UX/UI designer, design lead, and AI creator.</p>
-            <p>My experience brings together product design, team leadership, project management, and AI content creation. At MTS I grew from UX/UI designer to design lead. At CodeAxolot I spent two years combining project manager, designer, and AI-creator roles.</p>
+            <p>My experience combines product design, team leadership, project management, and AI content. At MTS I grew from UX/UI Designer to Design Lead, while at CodeAxolot I combined project management, design, and AI creation.</p>
             <p>From the first user flow to the final frame, what matters to me is how the whole experience comes together.</p>
           </div>
         </div>
-        <div>
-          <div class="about-media reveal">
-            <div class="carousel" data-carousel>
-              <div class="carousel-track">
-                <div class="slide active">
-                  <video muted loop playsinline preload="metadata" poster="assets/media/about-1-poster.jpg">
-                    <source src="assets/media/about-1.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="slide">
-                  <video muted loop playsinline preload="metadata" poster="assets/media/about-2-poster.jpg">
-                    <source src="assets/media/about-2.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="slide">
-                  <video muted loop playsinline preload="metadata" poster="assets/media/about-3-poster.jpg">
-                    <source src="assets/media/about-3.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <div class="slide">
-                  <img src="assets/media/about-1.jpg" alt="anestiiz" loading="lazy">
-                </div>
-              </div>
-              <button class="carousel-nav prev" type="button" aria-label="Previous">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 5L9 12L15 19" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </button>
-              <button class="carousel-nav next" type="button" aria-label="Next">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </button>
-              <div class="carousel-dots">
-                <button class="dot active" type="button" aria-label="Slide 1"></button>
-                <button class="dot" type="button" aria-label="Slide 2"></button>
-                <button class="dot" type="button" aria-label="Slide 3"></button>
-                <button class="dot" type="button" aria-label="Slide 4"></button>
-              </div>
+        <div class="about-media reveal">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="slide active"><video muted loop playsinline preload="metadata" poster="assets/media/about-1-poster.jpg"><source src="assets/media/about-1.mp4" type="video/mp4"></video></div>
+              <div class="slide"><video muted loop playsinline preload="metadata" poster="assets/media/about-2-poster.jpg"><source src="assets/media/about-2.mp4" type="video/mp4"></video></div>
+              <div class="slide"><video muted loop playsinline preload="metadata" poster="assets/media/about-3-poster.jpg"><source src="assets/media/about-3.mp4" type="video/mp4"></video></div>
+              <div class="slide"><img src="assets/media/about-1.webp" alt="anestiiz" loading="lazy"></div>
             </div>
+            <button class="carousel-nav prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 5L9 12L15 19" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="carousel-nav next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="carousel-dots"><button class="dot active" type="button" aria-label="Slide 1"></button><button class="dot" type="button" aria-label="Slide 2"></button><button class="dot" type="button" aria-label="Slide 3"></button><button class="dot" type="button" aria-label="Slide 4"></button></div>
           </div>
         </div>
       </div>
@@ -356,7 +349,7 @@
           <div class="service-num">01 / AI VIDEOS</div>
           <h3>AI video production</h3>
           <div>
-            <p>Different stories, styles and formats — with a clear creative direction from the first idea to the final cut.</p>
+            <p>Different stories, styles, and formats — with a clear creative direction from the first idea to the final cut.</p>
             <ul><li>Brand & product films</li><li>Social media advertising</li><li>Character stories & animation</li></ul>
           </div>
         </div>
@@ -379,11 +372,54 @@
       </div>
     </section>
 
+    <section class="personal-gallery wrap" aria-labelledby="personal-gallery-title" hidden>
+      <div class="personal-gallery-head reveal">
+        <div class="hero-menu-eyebrow">Personal gallery</div>
+        <h2 id="personal-gallery-title">Moments <em>beyond the mockups.</em></h2>
+      </div>
+      <div class="about-media personal-gallery-media reveal">
+        <div class="carousel" data-carousel>
+          <div class="carousel-track">
+            <div class="slide active">
+              <video muted loop playsinline preload="metadata" poster="assets/media/about-1-poster.jpg">
+                <source src="assets/media/about-1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="slide">
+              <video muted loop playsinline preload="metadata" poster="assets/media/about-2-poster.jpg">
+                <source src="assets/media/about-2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="slide">
+              <video muted loop playsinline preload="metadata" poster="assets/media/about-3-poster.jpg">
+                <source src="assets/media/about-3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="slide">
+              <img src="assets/media/about-1.webp" alt="anestiiz" loading="lazy">
+            </div>
+          </div>
+          <button class="carousel-nav prev" type="button" aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 5L9 12L15 19" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="carousel-nav next" type="button" aria-label="Next slide">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="carousel-dots">
+            <button class="dot active" type="button" aria-label="Slide 1"></button>
+            <button class="dot" type="button" aria-label="Slide 2"></button>
+            <button class="dot" type="button" aria-label="Slide 3"></button>
+            <button class="dot" type="button" aria-label="Slide 4"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="ai" class="ai-section wrap">
       <div class="ai-head reveal">
-        <div class="ai-eyebrow">✳ AI &amp; design</div>
+        <div class="ai-eyebrow"><img class="ai-mark" width="22" height="22" src="/assets/icons/ai-pink.png" alt=""> AI &amp; design</div>
         <h2>AI in the process.<br><em>My judgment at every stage.</em></h2>
-        <p class="ai-lead">I use AI to explore visual directions, create images and video, and iterate quickly. I remain responsible for the concept, logic, selection, and final refinement. Every asset is checked against the brief, visual consistency, and quality of detail.</p>
+        <p class="ai-lead">I use AI to explore visual directions, create images and video, and iterate quickly. I own the concept, logic, selection, and final refinement, checking every asset for purpose, consistency, and detail.</p>
         <div class="ai-facts">
           <span>AI + Design</span>
           <span>Product thinking</span>
@@ -393,23 +429,23 @@
       </div>
 
       <div class="ai-manifesto reveal" hidden>
-        <p>We live in a moment when <em>the speed of an idea matters more than its scale</em>. What used to take weeks — from concept to reveal — now takes one evening for a designer who knows AI, without losing quality. Anyone who can't assemble this stack falls a step behind.</p>
+        <p>We live in a moment when <em>the speed of an idea matters more than its scale</em>. What once took weeks can now move from idea to presentation in an evening without losing quality.</p>
       </div>
 
       <div class="ai-notes reveal" hidden>
         <div>
           <h3>Why AI matters right now.</h3>
-          <p>The market moves faster than ever: users expect a product that looks and feels like a top App Store app, not a rough MVP. Reaching that quality used to require a team of five and three months.</p>
+          <p>The market has accelerated: users expect a product that looks and works like a top App Store release, not a first MVP. AI makes that level possible with a much leaner process.</p>
           <p>Today one designer with the right AI stack can cover research, copy, identity, UI kit, prototype, and motion in the time it takes a team to write a brief.</p>
         </div>
         <div>
           <h3>Experience + AI = a product, not just visuals.</h3>
-          <p>AI without experience is pretty slides without logic. Experience without AI is slow and expensive. The value sits at the intersection: I know how a product is built, what sells, and where users get stuck — and I point AI at exactly those places.</p>
+          <p>AI without experience produces polished visuals without logic. Experience without AI is slower and more expensive. The value is in combining both with product thinking.</p>
           <p>AI generates variants; I cut the noise, keep what works for the client's goal, and shape it into one coherent product with a single voice.</p>
         </div>
         <div>
           <h3>Why the client can't do this alone.</h3>
-          <p>Clients have access to the same AI tools — but not to taste, visual literacy, or product thinking. AI produces plenty of "correct" — but doesn't tell "correct" from "on point."</p>
+          <p>Clients have access to the same AI tools — but not to taste, visual literacy, or product thinking. AI produces plenty of “correct” but cannot tell “correct” from “on point.”</p>
           <p>Without that lens you get an average product with an AI sheen. With me you get a product with character, logic, and confidence in every pixel.</p>
         </div>
         <div>
@@ -419,31 +455,32 @@
         </div>
       </div>
 
-      <div class="ai-cta reveal">
-        <h3>Have an interface or visual story in mind?</h3>
-        <a class="ai-cta-btn" href="brief.html">Discuss a Project <img class="icon-arrow-up light" src="Icons/Arrow Right Up.svg" alt=""></a>
-      </div>
     </section>
 
     <section id="contact" class="contact-main wrap">
-      <div class="content-head reveal"><div class="hero-menu-eyebrow">Contact</div><h2>Let's discuss<br><em>your project.</em></h2><p>I'll review the brief and get in touch to clarify the details and suggest the next step.</p></div>
-      <div class="contact-actions"><a class="primary" href="brief.html">Discuss a Project</a><a href="https://t.me/anestiiz" target="_blank" rel="noopener">Telegram @anestiiz ↗</a></div>
+      <div class="contact-main-layout">
+        <div class="contact-main-copy">
+          <div class="content-head reveal"><div class="hero-menu-eyebrow">Contact</div><h2>Let's discuss<br><em>your project.</em></h2><p>I'll review the brief and get in touch to clarify the details and suggest the next step.</p></div>
+          <div class="contact-actions"><a class="primary" href="/brief.html">Discuss a Project</a><a href="https://t.me/anestiiz" target="_blank" rel="noopener">TG @anestiiz <img class="icon-arrow-up" src="Icons/Arrow Right Up White.svg" alt=""></a></div>
+        </div>
+        <figure class="contact-portrait reveal"><img src="/assets/media/experience-pink.webp" alt="anestiiz in a pink look"></figure>
+      </div>
     </section>
 
   </main>
 
   <nav class="tabs-nav" aria-label="Work sections">
-    <a href="ai-creative.html" class="active" data-target="ai"><span class="lbl">AI creative</span></a>
-    <a href="apps.html" data-target="apps"><span class="lbl">Apps</span></a>
-    <a href="websites.html" data-target="websites"><span class="lbl">Websites</span></a>
-    <a href="presentations.html" data-target="presentations"><span class="lbl">Presentations</span></a>
+    <a href="/ai-creative.html" class="active" data-target="ai"><span class="lbl">AI creative</span></a>
+    <a href="/apps.html" data-target="apps"><span class="lbl">Apps</span></a>
+    <a href="/websites.html" data-target="websites"><span class="lbl">Websites</span></a>
+    <a href="/presentations.html" data-target="presentations"><span class="lbl">Presentations</span></a>
     <span class="tabs-pill" aria-hidden="true"></span>
   </nav>
 
   <footer>
     <div>© 2026 anestiiz &nbsp; Designed with intention.</div>
     <a class="top" href="#top">Back to top ↑</a>
-    <a class="ai" href="#ai">✳ How I use AI in design <img class="icon-arrow-up light" src="Icons/Arrow Right Up.svg" alt=""></a>
+    <a class="ai" href="#ai"><img class="ai-mark" width="22" height="22" src="/assets/icons/ai-pink.png" alt=""> How I use AI in design <img class="icon-arrow-up light" src="Icons/Arrow Right Up.svg" alt=""></a>
   </footer>
 
   <script>
@@ -634,6 +671,41 @@ const navBars = [
       }, { threshold: 0.25 });
       io.observe(car);
     });
+  </script>
+  <script>
+    (() => {
+      const hero = document.querySelector('[data-hero-v2]');
+      if (!hero) return;
+
+      requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.add('is-ready')));
+
+      const canParallax = matchMedia('(min-width: 1025px) and (pointer: fine)').matches
+        && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!canParallax) return;
+
+      let frame = 0;
+      hero.addEventListener('pointermove', event => {
+        if (frame) cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(() => {
+          const rect = hero.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width - .5) * 2;
+          const y = ((event.clientY - rect.top) / rect.height - .5) * 2;
+          hero.style.setProperty('--mx', x.toFixed(3));
+          hero.style.setProperty('--my', y.toFixed(3));
+        });
+      });
+      hero.addEventListener('pointerleave', () => {
+        hero.style.setProperty('--mx', 0);
+        hero.style.setProperty('--my', 0);
+      });
+
+      const syncScroll = () => {
+        const progress = Math.min(1, Math.max(0, scrollY / hero.offsetHeight));
+        hero.style.setProperty('--hero-scroll', progress.toFixed(3));
+      };
+      addEventListener('scroll', syncScroll, { passive: true });
+      syncScroll();
+    })();
   </script>
 </body>
 </html>
