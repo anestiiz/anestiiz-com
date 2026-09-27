@@ -65,7 +65,8 @@
         <source media="(max-width: 1024px)" srcset="assets/media/hero-first-screen-mobile.webp">
         <img class="hero-bg" src="assets/media/hero-first-screen.webp" alt="I design interfaces and generate the impossible. anestiiz — independent designer & AI creator">
       </picture>
-      <div class="hero-menu reveal" aria-label="Work sections">
+    </section>
+      <div class="hero-menu hero-menu-attached reveal" aria-label="Work sections">
         <div class="hero-menu-inner">
           <div class="hero-menu-eyebrow">My work</div>
           <nav class="hero-tabs" aria-label="Section select">
@@ -73,11 +74,12 @@
             <a href="/apps.html" data-target="apps"><span class="lbl">Apps</span></a>
             <a href="/websites.html" data-target="websites"><span class="lbl">Websites</span></a>
             <a href="/presentations.html" data-target="presentations"><span class="lbl">Presentations</span></a>
+            <a href="/banners.html" data-target="banners"><span class="lbl">Banners</span></a>
+            <a href="/neuro.html" data-target="neuro"><span class="lbl">AI photoshoots</span></a>
             <span class="hero-tabs-pill" aria-hidden="true"></span>
           </nav>
         </div>
       </div>
-    </section>
 
 
 
@@ -476,6 +478,8 @@
     <a href="/apps.html" data-target="apps"><span class="lbl">Apps</span></a>
     <a href="/websites.html" data-target="websites"><span class="lbl">Websites</span></a>
     <a href="/presentations.html" data-target="presentations"><span class="lbl">Presentations</span></a>
+    <a href="/banners.html" data-target="banners"><span class="lbl">Banners</span></a>
+    <a href="/neuro.html" data-target="neuro"><span class="lbl">AI photoshoots</span></a>
     <span class="tabs-pill" aria-hidden="true"></span>
   </nav>
 
@@ -500,7 +504,7 @@ const navBars = [
     if (navBars.length) {
       const sectionIds = ['ai','apps','websites','presentations'];
       const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-      const featuredForTabs = document.querySelector('.featured');
+      const featuredForTabs = document.querySelector('.hero-menu-attached') || document.querySelector('.featured');
       const movePill = (bar, link) => {
         const pill = bar.el.querySelector(bar.pillSel);
         if (!link || !pill) return;
@@ -589,10 +593,8 @@ const navBars = [
         event.preventDefault();
         const data = new FormData(requestForm);
         const lang = document.documentElement.lang === 'ru' ? 'ru' : 'en';
-        const subject = lang === 'ru' ? 'Заявка с сайта anestiiz' : 'Project request from anestiiz.com';
-        const labels = lang === 'ru'
-          ? { projectType: 'Тип проекта', contactMethod: 'Способ связи', contact: 'Контакт', details: 'О проекте' }
-          : { projectType: 'Project type', contactMethod: 'Contact method', contact: 'Contact', details: 'Project details' };
+        const subject = 'Project request from anestiiz.com';
+        const labels = { projectType: 'Project type', contactMethod: 'Contact method', contact: 'Contact', details: 'Project details' };
         const body = [
           `${labels.projectType}: ${data.get('projectType') || ''}`,
           `${labels.contactMethod}: ${data.get('contactMethod') || ''}`,
