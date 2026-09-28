@@ -4,7 +4,7 @@ let globalControlsLink = document.querySelector('link[data-global-controls]');
 if (!globalControlsLink) {
   const globalControls = document.createElement('link');
   globalControls.rel = 'stylesheet';
-  globalControls.href = '/assets/css/global-controls.css?v=4';
+  globalControls.href = '/assets/css/global-controls.css?v=5';
   globalControls.dataset.globalControls = '';
   document.head.append(globalControls);
   globalControlsLink = globalControls;
@@ -13,10 +13,18 @@ if (!globalControlsLink) {
 (() => {
   const path = location.pathname;
   const isStandaloneExperience = path.startsWith("/sites/");
+  const isPortfolioCase = /^\/(?:bloat-down|fluxframe|greekly|greekly-promo|lume)(?:\/|\.html|$)/.test(path) ||
+    /^\/a-feast-without-tomorrow(?:\.html|\/|$)/.test(path) ||
+    /^\/presentations\/(?:116-trophy-cyprus|frame|sloy)(?:\/|\.html|$)/.test(path);
   if (isStandaloneExperience || !document.body) return;
 
   document.body.querySelector(":scope > header")?.remove();
   document.body.querySelectorAll(":scope > #mobileDrawer, :scope > .drawer").forEach(element => element.remove());
+  if (isPortfolioCase) {
+    document.documentElement.classList.add("portfolio-case-page");
+    document.querySelectorAll(".topbar .back,.deck-back").forEach(element => element.remove());
+    return;
+  }
 
   const header = document.createElement("header");
   header.className = "portfolio-global-header";
@@ -143,7 +151,8 @@ if (YANDEX_METRIKA_ID) {
 }
 
 (() => {
-  if (location.pathname === "/" || document.querySelector(".back-link,.runner-back,.back,.deck-back,[data-site-back]")) return;
+  const isPortfolioCase = document.documentElement.classList.contains("portfolio-case-page");
+  if (!isPortfolioCase) return;
   const button = document.createElement("button");
   button.type = "button";
   button.className = "site-back-button";
