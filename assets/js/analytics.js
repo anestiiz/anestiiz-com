@@ -40,7 +40,7 @@ globalControlsLink.href = '/assets/css/global-controls.css?v=6';
         <a href="/#ai">Me & AI</a>
       </nav>
       <div class="portfolio-header-actions">
-        <a class="portfolio-brief-link" href="/brief.html">Fill the brief <img src="/Icons/Arrow Right Up.svg" alt=""></a>
+        <a class="portfolio-brief-link" href="/brief.html">Contact me <img src="/Icons/Arrow Right Up.svg" alt=""></a>
         <button class="portfolio-menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="portfolioGlobalDrawer"><span></span><span></span></button>
       </div>
     </div>`;
@@ -56,7 +56,7 @@ globalControlsLink.href = '/assets/css/global-controls.css?v=6';
       <span>WORK</span>
       <a href="/ai-creative.html">AI creative</a><a href="/apps.html">Apps</a><a href="/websites.html">Websites</a><a href="/presentations.html">Presentations</a><a href="/banners.html">Social Media</a>
       <span>MORE</span>
-      <a href="/#experience">My experience</a><a href="/#about">About me</a><a href="/#ai">Me & AI</a><a class="portfolio-drawer-brief" href="/brief.html">Fill the brief <img src="/Icons/Arrow Right Up.svg" alt=""></a>
+      <a href="/#experience">My experience</a><a href="/#about">About me</a><a href="/#ai">Me & AI</a><a class="portfolio-drawer-brief" href="/brief.html">Contact me <img src="/Icons/Arrow Right Up.svg" alt=""></a>
     </div>`;
 
   document.body.prepend(drawer);
