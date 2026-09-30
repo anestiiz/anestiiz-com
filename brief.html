@@ -445,6 +445,13 @@
       }, 300);
     }
 
+    function escapeTelegramHtml(value) {
+      return String(value || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;');
+    }
+
     function buildMessage(data) {
       const type   = data.get('projectType') || '—';
       const detail = data.get('serviceDetail');
@@ -452,20 +459,20 @@
       const lines = [
         '📩 <b>New brief from anestiiz.com</b>',
         '',
-        `<b>What are we creating:</b> ${type}`
+        `<b>What are we creating:</b> ${escapeTelegramHtml(type)}`
       ];
       if (detail && detailsSchemas[type]) {
-        lines.push(`<b>${detailsSchemas[type].label}</b> ${detail}`);
+        lines.push(`<b>${escapeTelegramHtml(detailsSchemas[type].label)}</b> ${escapeTelegramHtml(detail)}`);
       }
       const budget   = data.get('budget');
       const timeline = data.get('timeline');
-      if (budget)   lines.push(`<b>Budget:</b> ${budget}`);
-      if (timeline) lines.push(`<b>Timeline:</b> ${timeline}`);
+      if (budget)   lines.push(`<b>Budget:</b> ${escapeTelegramHtml(budget)}`);
+      if (timeline) lines.push(`<b>Timeline:</b> ${escapeTelegramHtml(timeline)}`);
       const notes = (data.get('notes') || '').trim();
-      if (notes) lines.push('', `<b>Details:</b> ${notes}`);
-      lines.push('', `<b>Reply via:</b> ${method}`);
-      lines.push(`<b>Contact:</b> ${(data.get('contact') || '').trim() || '—'}`);
-      lines.push('', `<i>${new Date().toLocaleString('ru-RU')}</i>`);
+      if (notes) lines.push('', `<b>Details:</b> ${escapeTelegramHtml(notes)}`);
+      lines.push('', `<b>Reply via:</b> ${escapeTelegramHtml(method)}`);
+      lines.push(`<b>Contact:</b> ${escapeTelegramHtml((data.get('contact') || '').trim() || '—')}`);
+      lines.push('', `<i>${new Date().toLocaleString('en-GB')}</i>`);
       return lines.join('\n');
     }
 
