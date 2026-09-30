@@ -260,8 +260,7 @@
   </footer>
 
   <script>
-    const TELEGRAM_BOT_TOKEN = '8493465630:AAGq14a_MWpJ9nlTQnn4M6eZo3JfeELdTRY';
-    const TELEGRAM_CHAT_ID   = '5631116037';
+    const TELEGRAM_BRIEF_ENDPOINT = 'https://anestiiz-telegram-events.palkina-anastasii.workers.dev/brief';
     const STORAGE_KEY        = 'anestiiz_brief_draft_v3';
 
     const requestForm   = document.getElementById('requestForm');
@@ -517,31 +516,24 @@
         }
         setStatus('', null);
 
-        if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+        if (!TELEGRAM_BRIEF_ENDPOINT) {
           setStatus('Sending is temporarily unavailable — message me on Telegram @anestiiz.', 'error');
           return;
         }
 
         const data = new FormData(requestForm);
         const text = buildMessage(data);
+        const payload = new FormData();
+        payload.append('text', text);
+        selectedPhotos.forEach(photo => payload.append('photos', photo, photo.name));
 
         if (submitBtn) submitBtn.disabled = true;
         setStatus('Sending…', null);
 
         try {
-          const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text, parse_mode: 'HTML', disable_web_page_preview: true })
-          });
+          const res = await fetch(TELEGRAM_BRIEF_ENDPOINT, { method: 'POST', body: payload });
           const json = await res.json();
-          if (!res.ok || !json.ok) throw new Error(json.description || 'sendMessage failed');
-          for (const photo of selectedPhotos) {
-            const photoData = new FormData(); photoData.append('chat_id', TELEGRAM_CHAT_ID); photoData.append('photo', photo, photo.name);
-            const photoRes = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, { method: 'POST', body: photoData });
-            const photoJson = await photoRes.json();
-            if (!photoRes.ok || !photoJson.ok) throw new Error(photoJson.description || 'sendPhoto failed');
-          }
+          if (!res.ok || !json.ok) throw new Error(json.error || 'Brief delivery failed');
 
           clearDraft();
           selectedPhotos = []; renderPhotoPreviews();
