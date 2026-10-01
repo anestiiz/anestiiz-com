@@ -55,7 +55,7 @@ globalControlsLink.href = '/assets/css/global-controls.css?v=8';
     <div class="portfolio-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
       <button class="portfolio-drawer-close" type="button" aria-label="Close menu">×</button>
       <span>WORK</span>
-      <a href="/ai-creative.html">AI creative</a><a href="/apps.html">Apps</a><a href="/websites.html">Websites</a><a href="/presentations.html">Presentations</a><a href="/banners.html">Social Media</a>
+      <a href="/websites.html">Web Design</a><a href="/apps.html">App Design</a><a href="/branding.html">Branding</a><a href="/ai-creative.html">AI Creative</a><a href="/presentations.html">Presentations</a><a href="/banners.html">Social Media</a>
       <span>MORE</span>
       <a href="/#experience">My experience</a><a href="/#about">About me</a><a href="/#ai">Me & AI</a><a class="portfolio-drawer-brief" href="/brief.html">Contact me <img src="/Icons/Arrow Right Up.svg" alt=""></a>
     </div>`;
