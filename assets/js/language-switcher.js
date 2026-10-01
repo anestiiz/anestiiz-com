@@ -1,6 +1,5 @@
 (() => {
   const currentLanguage = 'en';
-  const preferenceKey = 'anestiiz-language';
   const domains = { en: 'https://anestiiz.com', ru: 'https://anestiiz.ru' };
   const routeOverrides = {
     ru: {
@@ -18,16 +17,9 @@
   const params = new URLSearchParams(location.search);
   const incomingLanguage = params.get('language');
   if (incomingLanguage === currentLanguage) {
-    localStorage.setItem(preferenceKey, currentLanguage);
     params.delete('language');
     const query = params.toString();
     history.replaceState(null, '', `${location.pathname}${query ? `?${query}` : ''}${location.hash}`);
-  }
-
-  const preference = localStorage.getItem(preferenceKey);
-  if (!incomingLanguage && preference && preference !== currentLanguage) {
-    location.replace(routeFor(preference));
-    return;
   }
 
   const openLanguagePicker = () => {
@@ -69,7 +61,6 @@
     modal.querySelectorAll('[data-language]').forEach((button) => {
       button.addEventListener('click', () => {
         const language = button.dataset.language;
-        localStorage.setItem(preferenceKey, language);
         if (language === currentLanguage) {
           modal.remove();
           style.remove();
@@ -80,7 +71,7 @@
     });
   };
 
-  if (!localStorage.getItem(preferenceKey) && !incomingLanguage) {
+  if (!incomingLanguage) {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', openLanguagePicker, { once: true });
     } else {
