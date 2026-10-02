@@ -39,6 +39,7 @@ globalControlsLink.href = '/assets/css/global-controls.css?v=8';
         <a href="/#experience">My experience</a>
         <a href="/#about">About me</a>
         <a href="/#ai">Me & AI</a>
+        <a href="/pricing.html">Pricing</a>
       </nav>
       <div class="portfolio-header-actions">
         <a class="portfolio-brief-link" href="/brief.html">Contact me <img src="/Icons/Arrow Right Up.svg" alt=""></a>
@@ -57,7 +58,7 @@ globalControlsLink.href = '/assets/css/global-controls.css?v=8';
       <span>WORK</span>
       <a href="/websites.html">Web Design</a><a href="/apps.html">App Design</a><a href="/branding.html">Branding</a><a href="/ai-creative.html">AI Creative</a><a href="/presentations.html">Presentations</a><a href="/banners.html">Social Media</a>
       <span>MORE</span>
-      <a href="/#experience">My experience</a><a href="/#about">About me</a><a href="/#ai">Me & AI</a><a class="portfolio-drawer-brief" href="/brief.html">Contact me <img src="/Icons/Arrow Right Up.svg" alt=""></a>
+      <a href="/#experience">My experience</a><a href="/#about">About me</a><a href="/#ai">Me & AI</a><a href="/pricing.html">Pricing</a><a class="portfolio-drawer-brief" href="/brief.html">Contact me <img src="/Icons/Arrow Right Up.svg" alt=""></a>
     </div>`;
 
   document.body.prepend(drawer);

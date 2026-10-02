@@ -6,7 +6,8 @@
       '/shum/': '/banners/shum/',
       '/a-feast-without-tomorrow.html': '/banners/feast-no-tomorrow/',
       '/banners.html': '/banners/',
-      '/branding.html': '/branding/'
+      '/branding.html': '/branding/',
+      '/pricing.html': '/pricing/'
     }
   };
 
