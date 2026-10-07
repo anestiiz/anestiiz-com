@@ -21,12 +21,12 @@ let globalControlsLink = document.querySelector('link[data-global-controls]');
 if (!globalControlsLink) {
   const globalControls = document.createElement('link');
   globalControls.rel = 'stylesheet';
-  globalControls.href = '/assets/css/global-controls.css?v=social-buttons-20261004';
+  globalControls.href = '/assets/css/global-controls.css?v=drawer-socials-20261007';
   globalControls.dataset.globalControls = '';
   document.head.append(globalControls);
   globalControlsLink = globalControls;
 }
-globalControlsLink.href = '/assets/css/global-controls.css?v=social-buttons-20261004';
+globalControlsLink.href = '/assets/css/global-controls.css?v=drawer-socials-20261007';
 const arrowSpacingLink = document.createElement('link');
 arrowSpacingLink.rel = 'stylesheet';
 arrowSpacingLink.href = '/assets/css/arrow-spacing.css?v=20261003-1';
@@ -79,10 +79,14 @@ document.head.append(arrowSpacingLink);
     <div class="portfolio-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
       <button class="portfolio-drawer-close" type="button" aria-label="Close menu">×</button>
       <span>WORK</span>
-      <a href="/websites.html">Web Design</a><a href="/apps.html">App Design</a><a href="/branding.html">Branding</a><a href="/ai-creative.html">AI Creative</a><a href="/presentations.html">Presentations</a><a href="/banners.html">Social Media</a>
+      <a href="/websites.html">Web Design</a><a href="/apps.html">App Design</a><a href="/ai-creative.html">AI Creative</a><a href="/presentations.html">Presentations</a><a href="/banners.html">Social Media</a>
       <span>MORE</span>
-      <a href="/#experience">My experience</a><a href="/#about">About me</a><a href="/#ai">Me & AI</a><a href="/pricing.html">Pricing</a><div class="portfolio-drawer-socials"><a href="https://t.me/anestiiz" target="_blank" rel="noopener">Telegram</a><a href="https://www.behance.net/anestiiz" target="_blank" rel="noopener">Behance</a></div>
+      <a href="/#experience">My experience</a><a href="/#about">About me</a><a href="/#ai">Me & AI</a><a href="/pricing.html">Pricing</a><div class="portfolio-drawer-socials"></div>
     </div>`;
+
+  drawer.querySelector(".portfolio-drawer-socials").replaceChildren(
+    ...Array.from(header.querySelector(".portfolio-social-links").children, link => link.cloneNode(true))
+  );
 
   document.body.prepend(drawer);
   document.body.prepend(header);
