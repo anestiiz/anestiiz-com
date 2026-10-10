@@ -4,12 +4,11 @@
   if (!tabs || !grid) return;
 
   const extras = [
-    [['UX Audit','From $150'],['Additional Website Page','From $80–150'],['Additional Breakpoint','From $120–220'],['Design System','From $300'],['Motion Concept','From $150'],['Design QA / Support','From $30/hour']],
-    [['App UX Audit','From $150'],['Additional App Screen','From $40–70'],['Interactive Prototype','From $150'],['iOS / Android Adaptation','From $200'],['Design System','From $300'],['Design QA / Support','From $30/hour']],
-    [['Additional Logo Variation','From $70'],['Branded Application','From $40–120'],['Social Media Templates','From $90'],['Mini Brand Guidelines','From $150'],['Packaging Layout','From $120–220'],['Motion Logo','From $150']],
-    [['AI Image','From $30–50'],['Short AI Video','From $100'],['Advanced AI Video','From $500'],['Custom AI Character','From $200'],['Additional Video Format','From $40'],['Motion Concept','From $150']],
-    [['Additional Slide','From $15–30'],['Presentation Structure','From $80'],['Infographic','From $50'],['Editable Template','From $120'],['Slide Animation','From $80'],['Rush Delivery','+20% of project']],
-    [['Social Media Creative','From $30'],['Post Carousel','From $80–120'],['Stories Adaptation','From $15'],['Platform Adaptation','From $25'],['AI Image','From $30–50'],['Monthly Content System','From $220']]
+    [['UX Audit','From $120'],['Additional Website Page','From $60–120'],['Additional Breakpoint','From $100–180'],['Design System','From $240'],['Motion Concept','From $120'],['Design QA / Support','From $25/hour']],
+    [['App UX Audit','From $120'],['Additional App Screen','From $35–60'],['Interactive Prototype','From $120'],['iOS / Android Adaptation','From $160'],['Design System','From $240'],['Design QA / Support','From $25/hour']],
+    [['AI Image','From $25–40'],['AI Video up to 2 Minutes','From $50'],['Advanced AI Video','From $300'],['Custom AI Character','From $150'],['Additional Video Format','From $30'],['Motion Concept','From $120']],
+    [['Additional Slide','From $12–25'],['Presentation Structure','From $65'],['Infographic','From $40'],['Editable Template','From $100'],['Slide Animation','From $65'],['Rush Delivery','+20% of project']],
+    [['Social Media Creative','From $25'],['Post Carousel','From $65–100'],['Stories Adaptation','From $12'],['Platform Adaptation','From $20'],['AI Image','From $25–40'],['Monthly Content System','From $180']]
   ];
 
   const render = button => {
